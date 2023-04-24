@@ -1,0 +1,15 @@
+{
+  "name": "Arthur Hauenstein - Fullstack Engineer",
+  "short_name": "Arthur Hauenstein",
+  "description": "This is my personal page, where I will update my portfolio and bring news about myself.",
+  "icons": [
+    {
+      "src": "/img/icon.svg",
+      "sizes": "any"
+    }
+  ],
+  "background_color": "#1F1F24",
+  "display": "fullscreen",
+  "start_url": "/",
+  "theme_color": "#1bb3e0"
+}
