@@ -5,10 +5,15 @@ import { Fragment, useCallback, useEffect, useState } from "react";
 export function ThemeSelector() {
   const [selectedTheme, setSelectedTheme] = useState<
     "light" | "dark" | "system"
-  >(localStorage.theme);
+  >();
 
   const handleApplyTheme = useCallback(() => {
-    localStorage.theme = selectedTheme;
+    if (!selectedTheme) {
+      setSelectedTheme(localStorage.theme);
+    } else if (!!localStorage.theme) {
+      localStorage.theme = selectedTheme;
+    }
+
     if (selectedTheme === "system") {
       if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
         document.documentElement.classList.add("dark");
