@@ -8,13 +8,15 @@ export function ThemeSelector() {
   >();
 
   useEffect(() => {
-    setSelectedTheme(localStorage.theme);
+    if (localStorage.theme) {
+      setSelectedTheme(localStorage.theme);
+    } else {
+      setSelectedTheme("system");
+    }
   }, [setSelectedTheme]);
 
   const handleApplyTheme = useCallback(() => {
-    if (!!selectedTheme) {
-      localStorage.theme = selectedTheme;
-    }
+    localStorage.theme = selectedTheme;
 
     if (selectedTheme === "system") {
       if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
