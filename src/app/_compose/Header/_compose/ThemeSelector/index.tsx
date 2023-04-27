@@ -7,10 +7,12 @@ export function ThemeSelector() {
     "light" | "dark" | "system"
   >();
 
+  useEffect(() => {
+    setSelectedTheme(localStorage.theme);
+  }, [setSelectedTheme]);
+
   const handleApplyTheme = useCallback(() => {
-    if (!selectedTheme) {
-      setSelectedTheme(localStorage.theme);
-    } else if (!!localStorage.theme) {
+    if (!!selectedTheme) {
       localStorage.theme = selectedTheme;
     }
 
