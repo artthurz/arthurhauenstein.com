@@ -25,7 +25,7 @@ export default function RootLayout({
       className="[--scroll-mt:9.875rem] lg:[--scroll-mt:6.3125rem] js-focus-visible"
     >
       <body
-        className={`${inter.className} min-h-full flex flex-col px-4 sm:px-6 md:px-8 antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 [overflow-anchor:none]`}
+        className={`${inter.className} min-h-full flex flex-col antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 [overflow-anchor:none]`}
       >
         <Header />
         {children}
