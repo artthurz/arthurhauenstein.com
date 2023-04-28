@@ -12,10 +12,6 @@ export const metadata: Metadata = {
   icons: {
     icon: { url: "/img/favicon.ico", type: "image/svg" },
   },
-  themeColor: [
-    { media: "(prefers-color-scheme: dark)", color: "rgb(15 23 42)" },
-    { media: "(prefers-color-scheme: light)", color: "rgb(248 250 252)" },
-  ],
 };
 
 export default function RootLayout({
