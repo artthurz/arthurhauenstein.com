@@ -41,7 +41,7 @@ export default function Home() {
             <div className="pt-6 md:p-8 text-center md:text-left space-y-4">
               <blockquote>
                 <p className="text-lg font-medium">
-                  “Nos últimos 6 anos, como desenvolvedor, trabalhei com grandes
+                  “Nos últimos 7 anos, como desenvolvedor, trabalhei com grandes
                   empresas para ajudá-las a alcançar todo o seu potencial e
                   atrair novos clientes por meio da tecnologia.”
                 </p>
