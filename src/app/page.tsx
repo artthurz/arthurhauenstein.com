@@ -19,11 +19,18 @@ export default function Home() {
             Saia do oridinário e se destaque perante os concorrentes.
           </h1>
           <p className="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">
-            Construo aplicações focadas na experiência do usuário, com desgins
-            inovadores que se destacam perante os concorrentes, apenas fazer bem
-            feito já não é mais o suficiente.
+            Construo aplicações focadas na{" "}
+            <span className="text-sky-500 dark:text-sky-400">
+              experiência do usuário
+            </span>
+            , com{" "}
+            <span className="text-sky-500 dark:text-sky-400">
+              desgin inovador
+            </span>
+            , apenas fazer bem feito já não é mais o suficiente.
           </p>
-          <figure className="md:flex bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800 mt-8">
+
+          <figure className="md:flex rounded-x p-8 md:p-0 mt-8 text-center shadow-xl text-slate-900 dark:text-slate-300 bg-white dark:bg-slate-800 ring-1 ring-slate-900/5 dark:highlight-white/5 dark:ring-0">
             <Image
               className="w-24 h-24 md:w-48 md:h-auto object-cover md:object-contain rounded-full md:rounded mx-auto"
               src="/img/me.jpg"
