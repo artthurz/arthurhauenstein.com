@@ -1,6 +1,4 @@
-import Image from "next/image";
 import { ThemeSelector } from "./_compose";
-import Link from "next/link";
 import LogoIcon from "@/app/assets/LogoIcon";
 
 export const Header = () => {

@@ -1,40 +1,43 @@
 "use client";
 import { Menu, Transition } from "@headlessui/react";
-import { Fragment, useCallback, useEffect, useState } from "react";
+import {
+  Fragment,
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useState,
+} from "react";
 
 export function ThemeSelector() {
   const [selectedTheme, setSelectedTheme] = useState<
     "light" | "dark" | "system"
   >();
 
-  useEffect(() => {
-    if (localStorage.theme) {
-      setSelectedTheme(localStorage.theme);
-    } else {
-      setSelectedTheme("system");
-    }
-  }, [setSelectedTheme]);
-
   const handleApplyTheme = useCallback(() => {
-    localStorage.theme = selectedTheme;
+    console.log(selectedTheme, localStorage.theme);
 
-    if (selectedTheme === "system") {
+    if (!selectedTheme) {
+      setSelectedTheme(localStorage.theme ?? "system");
+    }
+
+    if (selectedTheme === "system" || (!selectedTheme && !localStorage.theme)) {
       if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
         document.documentElement.classList.add("dark");
       } else if (window.matchMedia("(prefers-color-scheme: light)").matches) {
         document.documentElement.classList.remove("dark");
       }
-      setSelectedTheme("system");
+      localStorage.setItem("theme", "system");
+      return;
     } else if (selectedTheme === "dark") {
       document.documentElement.classList.add("dark");
-      setSelectedTheme("dark");
-    } else {
+      localStorage.setItem("theme", "dark");
+    } else if (selectedTheme === "light") {
       document.documentElement.classList.remove("dark");
-      setSelectedTheme("light");
+      localStorage.setItem("theme", "light");
     }
   }, [selectedTheme]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     handleApplyTheme();
   }, [handleApplyTheme]);
 
@@ -64,9 +67,9 @@ export function ThemeSelector() {
           <svg
             viewBox="0 0 24 24"
             fill="none"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             className="w-6 h-6"
           >
             <path
@@ -90,8 +93,8 @@ export function ThemeSelector() {
         <span className="hidden dark:inline">
           <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6">
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M17.715 15.15A6.5 6.5 0 0 1 9 6.035C6.106 6.922 4 9.645 4 12.867c0 3.94 3.153 7.136 7.042 7.136 3.101 0 5.734-2.032 6.673-4.853Z"
               className="fill-sky-400/20"
             ></path>
@@ -104,8 +107,8 @@ export function ThemeSelector() {
               }
             ></path>
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M17 3a1 1 0 0 1 1 1 2 2 0 0 0 2 2 1 1 0 1 1 0 2 2 2 0 0 0-2 2 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 1 1 0-2 2 2 0 0 0 2-2 1 1 0 0 1 1-1Z"
               className={
                 selectedTheme === "dark"
@@ -142,9 +145,9 @@ export function ThemeSelector() {
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   className="w-6 h-6 mr-2"
                 >
                   <path
@@ -178,8 +181,8 @@ export function ThemeSelector() {
               >
                 <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6 mr-2">
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M17.715 15.15A6.5 6.5 0 0 1 9 6.035C6.106 6.922 4 9.645 4 12.867c0 3.94 3.153 7.136 7.042 7.136 3.101 0 5.734-2.032 6.673-4.853Z"
                     className="fill-transparent"
                   />
@@ -192,8 +195,8 @@ export function ThemeSelector() {
                     }
                   ></path>
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M17 3a1 1 0 0 1 1 1 2 2 0 0 0 2 2 1 1 0 1 1 0 2 2 2 0 0 0-2 2 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 1 1 0-2 2 2 0 0 0 2-2 1 1 0 0 1 1-1Z"
                     className={
                       selectedTheme === "dark"
@@ -217,8 +220,8 @@ export function ThemeSelector() {
                 <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6 mr-2">
                   <path
                     d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6Z"
-                    stroke-width="2"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinejoin="round"
                     className={
                       selectedTheme === "system"
                         ? "stroke-sky-500 fill-sky-400/20"
@@ -227,9 +230,9 @@ export function ThemeSelector() {
                   ></path>
                   <path
                     d="M14 15c0 3 2 5 2 5H8s2-2 2-5"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     className={
                       selectedTheme === "system"
                         ? "stroke-sky-500"

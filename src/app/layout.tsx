@@ -1,7 +1,8 @@
-import Head from "next/head";
+"use client";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { Header, Footer } from "./_compose";
+import { useEffect, useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
