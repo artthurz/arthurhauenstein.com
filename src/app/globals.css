@@ -7,6 +7,6 @@
   background: rgb(248 250 252);
 }
 
-[data-theme="dark"] {
+[data-mode="dark"] {
   background: rgb(11, 17, 32);
 }
