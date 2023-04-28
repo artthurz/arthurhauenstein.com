@@ -13,8 +13,8 @@ export const metadata: Metadata = {
     icon: { url: "/img/favicon.ico", type: "image/svg" },
   },
   themeColor: [
-    { media: "dark", color: "rgb(15 23 42)" },
-    { media: "light", color: "rgb(255 255 255)" },
+    { media: "(prefers-color-scheme: dark)", color: "rgb(15 23 42)" },
+    { media: "(prefers-color-scheme: light)", color: "rgb(248 250 252)" },
   ],
 };
 
