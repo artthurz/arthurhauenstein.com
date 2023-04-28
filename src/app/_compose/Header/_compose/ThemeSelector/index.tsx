@@ -36,7 +36,7 @@ export function ThemeSelector() {
       >
         <Menu.Items
           as="ul"
-          className="absolute z-50 right-8 top-full bg-white rounded-lg ring-1 ring-slate-900/10 shadow-lg overflow-hidden w-36 py-1 text-sm text-slate-700 font-semibold dark:bg-slate-800 dark:ring-0 dark:highlight-white/5 dark:text-slate-300 mt-2"
+          className="absolute z-50 right-8 top-full bg-white rounded-lg ring-1 ring-slate-900/10 shadow-lg overflow-hidden w-36 py-1 text-sm text-slate-700 font-semibold dark:bg-slate-800 dark:ring-0 dark:highlight-white/5 dark:text-slate-300 -mt-4"
         >
           <Menu.Item>
             {({ active }) => (
