@@ -14,27 +14,35 @@ export function ThemeSelector() {
   >();
 
   const handleApplyTheme = useCallback(() => {
-    console.log(selectedTheme, localStorage.theme);
-
-    if (!selectedTheme) {
+    if (!selectedTheme || !localStorage.theme) {
       setSelectedTheme(localStorage.theme ?? "system");
+      if (!localStorage.theme || localStorage.theme === "system") {
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          document.documentElement.classList.add("dark");
+        } else if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+          document.documentElement.classList.remove("dark");
+        }
+        localStorage.setItem("theme", "system");
+      } else if (localStorage.theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+      return;
     }
 
-    if (selectedTheme === "system" || (!selectedTheme && !localStorage.theme)) {
+    if (selectedTheme === "system") {
       if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
         document.documentElement.classList.add("dark");
       } else if (window.matchMedia("(prefers-color-scheme: light)").matches) {
         document.documentElement.classList.remove("dark");
       }
-      localStorage.setItem("theme", "system");
-      return;
     } else if (selectedTheme === "dark") {
       document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else if (selectedTheme === "light") {
+    } else {
       document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
     }
+    localStorage.setItem("theme", selectedTheme);
   }, [selectedTheme]);
 
   useLayoutEffect(() => {
@@ -53,7 +61,7 @@ export function ThemeSelector() {
       .removeEventListener("change", handleApplyTheme);
   }, [handleApplyTheme]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     addThemeChangeListner();
     return () => {
       removeThemeChangeListner();
