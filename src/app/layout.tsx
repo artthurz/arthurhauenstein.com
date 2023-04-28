@@ -24,13 +24,15 @@ export default function RootLayout({
       lang="en"
       className="[--scroll-mt:9.875rem] lg:[--scroll-mt:6.3125rem] js-focus-visible"
     >
-      <body
-        className={`${inter.className} min-h-full flex flex-col antialiased [overflow-anchor:none]`}
-      >
+      <body>
         <Providers>
-          <Header />
-          {children}
-          <Footer />
+          <main
+            className={`${inter.className} min-h-full flex flex-col antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 [overflow-anchor:none]`}
+          >
+            <Header />
+            {children}
+            <Footer />
+          </main>
         </Providers>
       </body>
     </html>

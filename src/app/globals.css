@@ -3,10 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    @apply bg-slate-50 dark:bg-[#0B1120];
-  }
   body {
-    @apply text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900;
+    @apply bg-slate-50 dark:bg-[#0B1120];
   }
 }
