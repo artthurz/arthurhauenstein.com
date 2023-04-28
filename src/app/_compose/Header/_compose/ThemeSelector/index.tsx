@@ -1,10 +1,19 @@
 "use client";
 import { Menu, Transition } from "@headlessui/react";
 import { useTheme } from "next-themes";
-import { Fragment } from "react";
+import { Fragment, useEffect, useState } from "react";
 
 export function ThemeSelector() {
+  const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <Menu>
