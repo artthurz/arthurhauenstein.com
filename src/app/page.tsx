@@ -14,7 +14,7 @@ export default function Home() {
             }}
           />
         </div>
-        <div className="relative max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32 px-4 sm:px-6 md:px-8 ">
+        <div className="relative max-w-5xl mx-auto pt-40 sm:pt-44 lg:pt-48 px-4 sm:px-6 md:px-8 ">
           <h1 className="text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center dark:text-white">
             Olá, me chamo <span> Arthur</span>
           </h1>

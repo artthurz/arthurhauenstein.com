@@ -2,15 +2,20 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import { Header, Footer } from "./_compose";
 import Providers from "./providers";
+import { Metadata } from "next";
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Arthur Hauenstein",
   description:
     "This is my personal page, where I will update my portfolio and bring news about myself.",
   icons: {
     icon: { url: "/img/favicon.ico", type: "image/svg" },
   },
+  themeColor: [
+    { media: "dark", color: "rgb(15 23 42)" },
+    { media: "light", color: "rgb(255 255 255)" },
+  ],
 };
 
 export default function RootLayout({
