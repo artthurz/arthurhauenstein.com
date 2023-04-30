@@ -14,25 +14,26 @@ export default function Home() {
             }}
           />
         </div>
-        <div className="relative max-w-5xl mx-auto pt-32 sm:pt-36 lg:pt-48 px-4 sm:px-6 md:px-8 ">
+        <div className="relative max-w-6xl mx-auto pt-32 sm:pt-36 lg:pt-48 px-4 sm:px-6 md:px-8 ">
           <h1 className="text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center dark:text-white">
-            Saia do oridinário e se destaque perante os concorrentes.
+            Bem-vindo ao meu portifólio, acompanhe minha tragetória até aqui.
           </h1>
           <p className="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">
             Construo aplicações focadas na{" "}
             <span className="text-sky-500 dark:text-sky-400">
               experiência do usuário
-            </span>
-            , com{" "}
+            </span>{" "}
+            e no <span className="text-sky-500 dark:text-sky-400">desgin</span>,
+            proporcionando{" "}
             <span className="text-sky-500 dark:text-sky-400">
-              desgin inovador
-            </span>
-            , apenas fazer bem feito já não é mais o suficiente.
+              experiências únicas
+            </span>{" "}
+            para as pessoas. Apenas fazer bem feito não é mais o suficiente.
           </p>
 
-          <figure className="md:flex rounded-x p-8 md:p-0 mt-8 text-center shadow-xl text-slate-900 dark:text-slate-300 bg-white dark:bg-slate-800 ring-1 ring-slate-900/5 dark:highlight-white/5 dark:ring-0">
+          <figure className="bg-opacity-50 dark:bg-opacity-50 md:flex rounded-x p-8 md:p-0 mt-32 text-center shadow-xl text-slate-900 dark:text-slate-300 bg-white dark:bg-slate-800 ring-1 ring-slate-900/5 dark:shadow-white/5 dark:ring-0">
             <Image
-              className="w-24 h-24 md:w-48 md:h-auto object-cover md:object-contain rounded-full md:rounded mx-auto"
+              className="w-36 h-36 md:w-48 md:h-auto object-cover md:object-contain rounded-full md:rounded mx-auto"
               src="/img/me.jpg"
               alt="Eu"
               width={1487}
@@ -58,20 +59,51 @@ export default function Home() {
           </figure>
         </div>
       </section>
-      <section className="px-4 sm:px-6 md:px-8">
-        <div className="max-w-7xl mx-auto  ">
-          <h2 className="mt-8 font-semibold text-sky-500">Sobre mim</h2>
-          <p className="mt-4 text-3xl sm:text-4xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 ">
-            Ainda não me conhece? Não seja por isso.
-          </p>
-          <p className="mt-4 max-w-3xl space-y-6 ">
-            If you&apos;re repeating the same utilities over and over and over
-            again, all you have to do is extract them into a component or
-            template partial and boom — you&apos;ve got a single source of truth
-            so you can make changes in one place.
-          </p>
-        </div>
-      </section>
+      <div className="pt-20 mb-20 flex flex-col gap-y-20 overflow-hidden sm:pt-32 sm:mb-32 sm:gap-y-32 md:pt-40 md:mb-40 md:gap-y-40 px-4 sm:px-6 md:px-8">
+        <section id="academic">
+          <div className="max-w-7xl mx-auto">
+            <div className="w-16 h-16 p-[0.1875rem] rounded-full ring-1 ring-slate-900/10 shadow overflow-hidden dark:bg-indigo-500 dark:shadow-white/20">
+              <div className="aspect-w-1 aspect-h-1 bg-[length:100%] bg-[url('/img/section/academic-light.png')] dark:bg-[url('/img/section/academic-dark.png')]" />
+            </div>
+            <h2 className="mt-8 font-semibold text-indigo-500 dark:text-indigo-400">
+              Formação acadêmica
+            </h2>
+            <p className="mt-4 text-3xl sm:text-4xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 ">
+              Graduação e cursos realizados.
+            </p>
+            <p className="mt-4 max-w-3xl space-y-6 ">
+              Direcionei minha carreira para a Engenharia de Software e em
+              tornar-me um profissional em T, especialista em Frontend mas com
+              conhecimentos exceciais e complementares para minha especialidade,
+              como UI Design e UX Design.
+            </p>
+          </div>
+        </section>
+        <section id="skills">
+          <div className="max-w-7xl mx-auto">
+            <div className="w-16 h-16 p-[0.1875rem] rounded-full ring-1 ring-slate-900/10 shadow overflow-hidden dark:bg-pink-500 dark:shadow-white/20">
+              <div className="aspect-w-1 aspect-h-1 bg-[length:100%] bg-[url('/img/section/skills-light.png')] dark:bg-[url('/img/section/skills-dark.png')]" />
+            </div>
+            <h2 className="mt-8 font-semibold text-pink-500 dark:text-pink-400">
+              Competências
+            </h2>
+            <p className="mt-4 text-3xl sm:text-4xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 ">
+              Tecnologias para construir o que quisermos.
+            </p>
+            <div className="mt-4 max-w-3xl space-y-6 ">
+              <p>
+                Como sou um entusiasta por técnologia estou sempre atento aos
+                movimentos do mercado e com isso estudando e validando
+                técnologias emergentes que podem agregar ao trabalho.
+              </p>
+              <p>
+                Busco trabalhar com as melhores técnologias para resolver as
+                mais diversos necessidades e problemas.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
     </React.Fragment>
   );
 }
