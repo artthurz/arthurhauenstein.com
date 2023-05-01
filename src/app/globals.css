@@ -16,4 +16,20 @@
   .aspect-h-1 {
     --tw-aspect-h: 1;
   }
+
+  .dark .radial-gradiant-highlight {
+    background-image: radial-gradient(
+      circle at 50%,
+      rgba(255, 255, 255, 0.25),
+      transparent 50%
+    );
+  }
+
+  .radial-gradiant-highlight {
+    background-image: radial-gradient(
+      circle at 50%,
+      rgba(15, 23, 42, 0.25),
+      transparent 50%
+    );
+  }
 }
