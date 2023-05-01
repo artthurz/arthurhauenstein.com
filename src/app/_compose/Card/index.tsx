@@ -13,7 +13,7 @@ export const Card = ({ children, shadowColor, title, ...props }: CardProps) => {
   const [childrenPerspective, setChildrenPerspective] = useState({});
   const [highlightPerspective, setHighlightPerspective] = useState({});
 
-  const handlePointerMove = (event: PointerEvent) => {
+  function handlePointerMove(event: PointerEvent) {
     const pointerTypeIsMouse = event.pointerType === "mouse";
     if (!pointerTypeIsMouse) {
       event.preventDefault();
@@ -72,7 +72,7 @@ export const Card = ({ children, shadowColor, title, ...props }: CardProps) => {
     setCardPerspective(cardStyle);
     setChildrenPerspective(childrenStyle);
     setHighlightPerspective(highlightStyle);
-  };
+  }
 
   function handlePointerLeave() {
     setCardPerspective({
@@ -90,8 +90,15 @@ export const Card = ({ children, shadowColor, title, ...props }: CardProps) => {
   }
 
   useEffect(() => {
-    wrapperRef.current?.addEventListener("pointermove", handlePointerMove);
-    wrapperRef.current?.addEventListener("pointerleave", handlePointerLeave);
+    const wrapper = wrapperRef.current;
+
+    wrapper?.addEventListener("pointermove", handlePointerMove);
+    wrapper?.addEventListener("pointerleave", handlePointerLeave);
+
+    return () => {
+      wrapper?.removeEventListener("pointermove", handlePointerMove);
+      wrapper?.removeEventListener("pointerleave", handlePointerLeave);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -102,7 +109,7 @@ export const Card = ({ children, shadowColor, title, ...props }: CardProps) => {
         ...cardPerspective,
       }}
       {...props}
-      className="relative backdrop-blur dark:backdrop-blur bg-opacity-50 dark:bg-opacity-50 flex pd-2 w-28 h-28 flex-col lg:p-4 rounded-xl lg:w-60 lg:h-28 lg:flex-row overflow-hidden justify-center items-center z-10 touch-none hover:cursor-pointer"
+      className="relative hover:backdrop-blur hover:dark:backdrop-blur hover:bg-opacity-50 hover:dark:bg-opacity-50 flex pd-2 w-28 h-28 flex-col lg:p-4 rounded-xl lg:w-60 lg:h-28 lg:flex-row overflow-hidden justify-center items-center z-10 touch-none hover:cursor-pointer"
     >
       <div ref={wrapperRef} className="absolute z-10 inset-0 cursor-pointer" />
       <div style={childrenPerspective}>{children}</div>
