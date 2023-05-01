@@ -1,5 +1,5 @@
 import { ThemeSelector, Menu } from "./_compose";
-import LogoIcon from "@/app/assets/LogoIcon";
+import LogoIcon from "@/assets/LogoIcon";
 
 export const Header = () => {
   return (
