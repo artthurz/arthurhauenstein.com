@@ -1,12 +1,12 @@
 import Image from "next/image";
 import React from "react";
-import { Cards } from "./_compose";
+import { SkillsCards } from "./_compose";
 
 export default function Home() {
   return (
     <React.Fragment>
       <section className="relative min-h-[70rem] -mt-[72px]">
-        <div className="bg-contain min-h-[70rem] absolute inset-0 bottom-10 bg-bottom bg-no-repeat bg-slate-50 dark:bg-[#0B1120] bg-[url('/img/beams-light.png')] dark:bg-[url('/img/beams-dark.jpg')]">
+        <div className="bg-contain min-h-[70rem] absolute inset-0 bottom-10 bg-bottom bg-no-repeat bg-slate-50 dark:bg-[#0B1120] bg-[url('/img/beams-background/beams-light.png')] dark:bg-[url('/img/beams-background/beams-dark.jpg')]">
           <div className=" min-h-[70rem] absolute inset-0 bg-[url('/img/bg-grid-slate-900.svg')] bg-[bottom_1px_center] dark:bg-[url('/img/bg-grid-slate-400.svg')] dark:bg-bottom dark:border-b dark:border-slate-100/5 [mask-image:linear-gradient(transparent,black)] [webkit-mask-image:linear-gradient(transparent,black)]" />
         </div>
         <div className="relative max-w-6xl mx-auto pt-32 sm:pt-36 lg:pt-48 px-4 sm:px-6 md:px-8 ">
@@ -75,10 +75,40 @@ export default function Home() {
           </div>
           <div className="relative pt-10 xl:pt-0 mt-10 xl:mt-2">
             <div className="hidden dark:block absolute inset-x-0 h-[37.5rem] bg-gradient-to-b from-[#0c1120] top-0 xl:top-8" />
-            <div className="absolute top-0 inset-x-0 bg-top bg-no-repeat bg-[url('/img/beams-indigo-light.jpg')] dark:bg-[url('/img/beams-indigo-dark.png')] [background-size:125.5rem] [height:30rem] xl:top-8" />
+            <div className="absolute top-0 inset-x-0 bg-top bg-no-repeat bg-[url('/img/beams-background/beams-indigo-light.jpg')] dark:bg-[url('/img/beams-background/beams-indigo-dark.png')] [background-size:125.5rem] [height:30rem] xl:top-8" />
+            <div className="absolute inset-x-0 h-[37.5rem] bg-[url('/img/bg-grid-slate-900.svg')] bg-top [mask-image:linear-gradient(0deg,transparent,black)] dark:bg-[url('/img/bg-grid-slate-400.svg')] dark:bg-[center_top_-1px] dark:border-t dark:border-slate-100/5 top-0 xl:top-8" />
+            <div className="h-96 max-w-7xl mx-auto px-4 sm:px-6 md:px-8"></div>
+          </div>
+        </section>
+        <section id="skills">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+            <div className="w-16 h-16 p-[0.1875rem] rounded-full ring-1 ring-slate-900/10 shadow overflow-hidden dark:bg-pink-500 dark:shadow-white/20">
+              <div className="aspect-w-1 aspect-h-1 bg-[length:100%] bg-[url('/img/section/skills-light.png')] dark:bg-[url('/img/section/skills-dark.png')]" />
+            </div>
+            <h2 className="mt-8 font-semibold text-pink-500 dark:text-pink-400">
+              Competências
+            </h2>
+            <p className="mt-4 text-3xl sm:text-4xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 ">
+              Tecnologias para construir o que quisermos.
+            </p>
+            <div className="mt-4 max-w-3xl space-y-6 ">
+              <p>
+                Como sou um entusiasta por técnologia estou sempre atento aos
+                movimentos do mercado, com isso estudo e valido técnologias
+                emergentes que podem agregar ao trabalho.
+              </p>
+              <p>
+                Busco trabalhar com as melhores técnologias para resolver as
+                mais diversas necessidades e problemas.
+              </p>
+            </div>
+          </div>
+          <div className="relative pt-10 xl:pt-0 mt-10 xl:mt-2">
+            <div className="hidden dark:block absolute inset-x-0 h-[37.5rem] bg-gradient-to-b from-[#0c1120] top-0 xl:top-8" />
+            <div className="absolute top-0 inset-x-0 bg-top bg-no-repeat bg-[url('/img/beams-background/beams-pink-light.jpg')] dark:bg-[url('/img/beams-background/beams-pink-dark.png')] [background-size:125.5rem] [height:30rem] xl:top-8" />
             <div className="absolute inset-x-0 h-[37.5rem] bg-[url('/img/bg-grid-slate-900.svg')] bg-top [mask-image:linear-gradient(0deg,transparent,black)] dark:bg-[url('/img/bg-grid-slate-400.svg')] dark:bg-[center_top_-1px] dark:border-t dark:border-slate-100/5 top-0 xl:top-8" />
             <div className="h-96 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-              <Cards />
+              <SkillsCards />
             </div>
           </div>
         </section>
