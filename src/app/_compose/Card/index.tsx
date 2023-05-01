@@ -96,9 +96,12 @@ export const Card = ({ children, shadowColor, title, ...props }: CardProps) => {
 
   return (
     <div
-      style={cardPerspective}
+      style={{
+        transition: "box-shadow 0.6s, transform 0.6s",
+        ...cardPerspective,
+      }}
       {...props}
-      className="relative backdrop-blur dark:backdrop-blur bg-opacity-50 dark:bg-opacity-50 flex pd-2 w-28 h-28 flex-col md:p-4 rounded-xl md:w-60 md:h-28 md:flex-row overflow-hidden justify-center items-center z-40 transition-shadow touch-none hover:cursor-pointer hover:[transition:transform 0s,box-shadow 0s]"
+      className="relative backdrop-blur dark:backdrop-blur bg-opacity-50 dark:bg-opacity-50 flex pd-2 w-28 h-28 flex-col md:p-4 rounded-xl md:w-60 md:h-28 md:flex-row overflow-hidden justify-center items-center z-40 touch-none hover:cursor-pointer hover:[transition:transform 0s,box-shadow 0s]"
     >
       <div ref={wrapperRef} className="absolute z-50 inset-0 cursor-pointer" />
       <div style={childrenPerspective}>{children}</div>
