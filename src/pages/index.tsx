@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import { SkillsCards } from '../components'
+import { SkillsCards } from '@src/components'
 import { useTranslator } from '@src/i18n'
 
 export default function Home() {

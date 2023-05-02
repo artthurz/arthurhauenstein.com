@@ -1,7 +1,7 @@
 import '@src/styles/globals.css'
 import type { AppProps } from 'next/app'
 import Providers from './providers'
-import { Footer, Header } from '../_compose'
+import { Footer, Header } from '@src/components'
 import { Inter } from 'next/font/google'
 import Head from 'next/head'
 
