@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export function SkillsCards() {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-4">
       <div className="w-auto flex justify-center items-center">
         <Card key="typescript" shadowColor="#01ADD7" title="TypeScript">
           <Image
