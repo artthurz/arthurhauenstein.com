@@ -57,7 +57,7 @@ export default function App({ Component, pageProps }: AppProps) {
           href="/img/favicon-16x16.png"
         />
       </Head>
-      <main className={`${inter.className}`}>
+      <main className={`${inter.className} bg-white dark:bg-slate-900`}>
         <Header />
         <Component {...pageProps} />
         <Footer />
