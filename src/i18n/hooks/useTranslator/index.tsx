@@ -24,8 +24,6 @@ export default function useTranslator() {
 
   const dictionary = dictionaries[locale]
 
-  console.log(dictionary)
-
   function translate(key: string) {
     let translation = key
       .split('.')

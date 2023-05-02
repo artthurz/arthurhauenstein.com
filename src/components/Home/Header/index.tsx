@@ -1,4 +1,4 @@
-import { ThemeSelector, Menu, Nav } from './_compose'
+import { ThemeSelector, Menu, Nav, LocaleSelector } from './_compose'
 import LogoIcon from '@src/assets/LogoIcon'
 
 export default function Header() {
@@ -7,8 +7,9 @@ export default function Header() {
       <LogoIcon className="w-auto h-5" />
       <div className="flex items-center">
         <Nav />
-        <div className="flex items-center md:border-l md:border-slate-200 ml-6 pl-6 md:dark:border-slate-800">
+        <div className="flex items-center gap-2 md:border-l md:border-slate-200 ml-6 pl-6 md:dark:border-slate-800">
           <ThemeSelector />
+          <LocaleSelector className="hidden md:block" />
           <Menu />
         </div>
       </div>
