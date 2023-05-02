@@ -60,9 +60,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="msapplication-TileColor" content="#0ea5e9" />
         <meta name="theme-color" content="#0ea5e9" />
       </Head>
-      <main
-        className={`${inter.className} bg-white dark:bg-slate-900 min-h-full flex flex-col antialiased [overflow-anchor:none]`}
-      >
+      <main className={`${inter.className}`}>
         <Header />
         <Component {...pageProps} />
         <Footer />
