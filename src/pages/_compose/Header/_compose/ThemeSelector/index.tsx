@@ -3,7 +3,7 @@ import { Menu, Transition } from '@headlessui/react'
 import { useTheme } from 'next-themes'
 import { Fragment, useEffect, useState } from 'react'
 
-export function ThemeSelector() {
+export default function ThemeSelector() {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
 

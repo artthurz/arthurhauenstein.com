@@ -1,9 +1,13 @@
 'use client'
 import { Dialog, Transition } from '@headlessui/react'
-import React, { useState, Fragment } from 'react'
+import { useRouter, usePathname } from 'next/navigation'
+import React, { useState, Fragment, useEffect } from 'react'
 
-export function Menu() {
+export default function Menu() {
   let [isOpen, setIsOpen] = useState(false)
+  const router = useRouter()
+  const pathName = usePathname()
+  const [selectedLanguage, setSelectedLanguage] = useState('')
 
   function closeModal() {
     setIsOpen(false)
@@ -63,51 +67,29 @@ export function Menu() {
               <li>
                 <a
                   className="hover:text-sky-500 dark:hover:text-sky-400"
-                  href="/docs/installation"
+                  href="#academic"
+                  onClick={closeModal}
                 >
-                  Docs
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://tailwindui.com/?ref=top"
-                  className="hover:text-sky-500 dark:hover:text-sky-400"
-                >
-                  Components
+                  Formação
                 </a>
               </li>
               <li>
                 <a
                   className="hover:text-sky-500 dark:hover:text-sky-400"
-                  href="/blog"
+                  href="#skills"
+                  onClick={closeModal}
                 >
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a
-                  className="hover:text-sky-500 dark:hover:text-sky-400"
-                  href="/showcase"
-                >
-                  Showcase
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/tailwindlabs/tailwindcss"
-                  className="hover:text-sky-500 dark:hover:text-sky-400"
-                >
-                  GitHub
+                  Competências
                 </a>
               </li>
             </ul>
             <div className="mt-6 pt-6 border-t border-slate-200 dark:border-slate-200/10">
               <div className="flex items-center justify-between">
                 <label
-                  htmlFor="theme"
+                  htmlFor="language"
                   className="text-slate-700 font-normal dark:text-slate-400"
                 >
-                  Switch theme
+                  Mudar idioma
                 </label>
                 <div className="relative flex items-center ring-1 ring-slate-900/10 rounded-lg shadow-sm p-2 text-slate-700 font-semibold dark:bg-slate-600 dark:ring-0 dark:text-slate-200 dark:shadow-white/5">
                   <svg
@@ -160,12 +142,13 @@ export function Menu() {
                     ></path>
                   </svg>
                   <select
-                    id="theme"
+                    id="language"
                     className="absolute appearance-none inset-0 w-full h-full opacity-0"
+                    value={selectedLanguage}
                   >
-                    <option value="light">Light</option>
-                    <option value="dark">Dark</option>
-                    <option value="system">System</option>
+                    <option value="pt">Português</option>
+                    <option value="dark">Inglês</option>
+                    <option value="system">Espanho</option>
                   </select>
                 </div>
               </div>

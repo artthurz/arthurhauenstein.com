@@ -1,8 +1,10 @@
 import Image from 'next/image'
 import React from 'react'
 import { SkillsCards } from './_compose'
+import { useTranslator } from '@src/i18n'
 
 export default function Home() {
+  const translate = useTranslator()
   return (
     <React.Fragment>
       <section className="relative min-h-[70rem] -mt-[72px]">
@@ -11,7 +13,8 @@ export default function Home() {
         </div>
         <div className="relative max-w-6xl mx-auto pt-32 sm:pt-36 lg:pt-48 px-4 sm:px-6 md:px-8 ">
           <h1 className="text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center dark:text-white">
-            Bem-vindo ao meu portifólio, acompanhe minha tragetória até aqui.
+            {translate('test')} Bem-vindo ao meu portifólio, acompanhe minha
+            tragetória até aqui.
           </h1>
           <p className="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">
             Construo aplicações focadas na{' '}
