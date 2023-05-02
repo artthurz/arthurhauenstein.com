@@ -6,7 +6,7 @@ export default function Document() {
       <Head />
       <body
         className={
-          'bg-white dark:bg-slate-900 min-h-full flex flex-col antialiased [overflow-anchor:none]'
+          'bg-slate-50 dark:bg-[#0B1120] min-h-full flex flex-col antialiased [overflow-anchor:none]'
         }
       >
         <Main />
