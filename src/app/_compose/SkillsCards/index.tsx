@@ -1,12 +1,13 @@
 import React from 'react'
 import { Card } from '@/components'
 import Image from 'next/image'
+import NextLogo from './assets/next'
 
 export function SkillsCards() {
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-4">
       <div className="w-auto flex justify-center items-center">
-        <Card key="typescript" shadowColor="#01ADD7" title="TypeScript">
+        <Card key="typescript" className="[color:#2563eb]" title="TypeScript">
           <Image
             className="w-20 h-20 object-contain mx-auto"
             src="/img/skills/typescript.svg"
@@ -17,7 +18,7 @@ export function SkillsCards() {
         </Card>
       </div>
       <div className="w-auto flex justify-center items-center">
-        <Card key="react" shadowColor="#61D9FA" title="React">
+        <Card key="react" className="[color:#0ea5e9]" title="React">
           <Image
             className="w-20 h-20 object-contain mx-auto"
             src="/img/skills/react.svg"
@@ -28,18 +29,20 @@ export function SkillsCards() {
         </Card>
       </div>
       <div className="w-auto flex justify-center items-center">
-        <Card key="next" shadowColor="#eee" title="Next.js">
-          <Image
-            className="w-20 h-20 object-contain mx-auto"
-            src="/img/skills/next.svg"
-            alt="Next.js"
-            width={80}
-            height={80}
-          />
+        <Card
+          key="next"
+          className="[color:#1e293b] dark:dark:[color:white]"
+          title="Next.js"
+        >
+          <NextLogo className="w-20 h-20 object-contain mx-auto" />
         </Card>
       </div>
       <div className="w-auto flex justify-center items-center">
-        <Card key="reactnative" shadowColor="#9261FB" title="React Native">
+        <Card
+          key="reactnative"
+          className="[color:#7c3aed]"
+          title="React Native"
+        >
           <Image
             className="w-20 h-20 object-contain mx-auto"
             src="/img/skills/reactnative.svg"
@@ -50,7 +53,7 @@ export function SkillsCards() {
         </Card>
       </div>
       <div className="w-auto flex justify-center items-center">
-        <Card key="tailwindcss" shadowColor="#38BDF8" title="tailwindcss">
+        <Card key="tailwindcss" className="[color:#0ea5e9]" title="tailwindcss">
           <Image
             className="w-20 h-20 object-contain mx-auto"
             src="/img/skills/tailwindcss.svg"
@@ -61,7 +64,7 @@ export function SkillsCards() {
         </Card>
       </div>
       <div className="w-auto flex justify-center items-center">
-        <Card key="node" shadowColor="#408F3B" title="Node">
+        <Card key="node" className="[color:#065f46]" title="Node">
           <Image
             className="w-20 h-20 object-contain mx-auto"
             src="/img/skills/node.svg"
@@ -72,7 +75,7 @@ export function SkillsCards() {
         </Card>
       </div>
       <div className="w-auto flex justify-center items-center">
-        <Card key="nest" shadowColor="#E93333" title="NestJS">
+        <Card key="nest" className="[color:#be123c]" title="NestJS">
           <Image
             className="w-20 h-20 object-contain mx-auto"
             src="/img/skills/nest.svg"
@@ -83,7 +86,7 @@ export function SkillsCards() {
         </Card>
       </div>
       <div className="w-auto flex justify-center items-center">
-        <Card key="html" shadowColor="#E44E28" title="HTML">
+        <Card key="html" className="[color:#fb7185]" title="HTML">
           <Image
             className="w-20 h-20 object-contain mx-auto"
             src="/img/skills/html.svg"
@@ -94,7 +97,7 @@ export function SkillsCards() {
         </Card>
       </div>
       <div className="w-auto flex justify-center items-center">
-        <Card key="css" shadowColor="#2B51E5" title="CSS">
+        <Card key="css" className="[color:#1e40af]" title="CSS">
           <Image
             className="w-20 h-20 object-contain mx-auto"
             src="/img/skills/css.svg"
@@ -105,22 +108,11 @@ export function SkillsCards() {
         </Card>
       </div>
       <div className="w-auto flex justify-center items-center">
-        <Card key="postgresql" shadowColor="#2D6294" title="PostgreSQL">
+        <Card key="postgresql" className="[color:#1e3a8a]" title="PostgreSQL">
           <Image
             className="w-20 h-20 object-contain mx-auto"
             src="/img/skills/postgresql.svg"
             alt="PostgreSQL"
-            width={80}
-            height={80}
-          />
-        </Card>
-      </div>
-      <div className="w-auto flex justify-center items-center">
-        <Card key="mongo" shadowColor="#419842" title="MongoDB">
-          <Image
-            className="w-20 h-20 object-contain mx-auto"
-            src="/img/skills/mongo.svg"
-            alt="MongoDB"
             width={80}
             height={80}
           />

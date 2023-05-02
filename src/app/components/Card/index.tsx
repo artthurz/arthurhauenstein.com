@@ -3,11 +3,11 @@ import { useEffect, useRef, useState } from 'react'
 
 export type CardProps = {
   children: React.ReactNode
-  shadowColor: string
+  className: string
   title: string
 }
 
-export const Card = ({ children, shadowColor, title, ...props }: CardProps) => {
+export const Card = ({ children, className, title, ...props }: CardProps) => {
   const wrapperRef = useRef<HTMLDivElement>(null)
   const [cardPerspective, setCardPerspective] = useState({})
   const [childrenPerspective, setChildrenPerspective] = useState({})
@@ -45,7 +45,7 @@ export const Card = ({ children, shadowColor, title, ...props }: CardProps) => {
     const cardStyle = {
       transform: `scale(1.1) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
       boxShadow: `
-          ${-rotateY / 2}px ${rotateX / 2}px 15px ${shadowColor}`,
+          ${-rotateY / 2}px ${rotateX / 2}px 15px`,
       transition: 'transform 0s, box-shadow 0s'
     }
 
@@ -102,10 +102,11 @@ export const Card = ({ children, shadowColor, title, ...props }: CardProps) => {
     <div
       style={{
         transition: 'box-shadow 0.6s, transform 0.6s',
+        border: `1px solid`,
         ...cardPerspective
       }}
       {...props}
-      className="relative hover:backdrop-blur hover:dark:backdrop-blur hover:bg-opacity-50 hover:dark:bg-opacity-50 grid pd-2 w-36 h-36 grid-cols-1 lg:p-4 rounded-xl md:w-60 md:h-28 md:grid-cols-2 overflow-hidden justify-center items-center z-10 touch-none hover:cursor-pointer"
+      className={`${className} relative backdrop-blur dark:backdrop-blur grid pd-2 w-36 h-36 grid-cols-1 lg:p-4 rounded-xl md:w-60 md:h-28 md:grid-cols-2 overflow-hidden justify-center items-center z-10 touch-none hover:cursor-pointer`}
     >
       <div ref={wrapperRef} className="absolute  z-10 inset-0 cursor-pointer" />
       <div style={childrenPerspective}>{children}</div>

@@ -20,10 +20,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html
-      lang="en"
-      className="[--scroll-mt:9.875rem] lg:[--scroll-mt:6.3125rem] js-focus-visible"
-    >
+    <html lang="en">
       <body
         className={`${inter.className} min-h-full flex flex-col antialiased [overflow-anchor:none]`}
       >
