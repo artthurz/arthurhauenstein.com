@@ -3,6 +3,11 @@ import en from '@src/i18n/dictionaries/en-US.json'
 import pt from '@src/i18n/dictionaries/pt-BR.json'
 import es from '@src/i18n/dictionaries/es-ES.json'
 
+export const localeLabel = {
+  en: 'English',
+  pt: 'Português',
+  es: 'Español'
+}
 export const defaultLocale = 'en'
 export const locales = ['en', 'pt', 'es'] as const
 export type TLocales = 'en' | 'pt' | 'es'
