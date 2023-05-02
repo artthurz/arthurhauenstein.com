@@ -56,9 +56,6 @@ export default function App({ Component, pageProps }: AppProps) {
           sizes="16x16"
           href="/img/favicon-16x16.png"
         />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0ea5e9" />
-        <meta name="msapplication-TileColor" content="#0ea5e9" />
-        <meta name="theme-color" content="#0ea5e9" />
       </Head>
       <main className={`${inter.className}`}>
         <Header />
