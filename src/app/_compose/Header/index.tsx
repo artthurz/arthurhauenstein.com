@@ -1,5 +1,5 @@
-import { ThemeSelector, Menu } from "./_compose";
-import LogoIcon from "@/assets/LogoIcon";
+import { ThemeSelector, Menu } from './_compose'
+import LogoIcon from '@/assets/LogoIcon'
 
 export const Header = () => {
   return (
@@ -10,5 +10,5 @@ export const Header = () => {
         <Menu />
       </div>
     </header>
-  );
-};
+  )
+}

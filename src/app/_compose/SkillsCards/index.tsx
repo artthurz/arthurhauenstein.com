@@ -1,6 +1,6 @@
-import React from "react";
-import { Card } from "@/components";
-import Image from "next/image";
+import React from 'react'
+import { Card } from '@/components'
+import Image from 'next/image'
 
 export function SkillsCards() {
   return (
@@ -127,5 +127,5 @@ export function SkillsCards() {
         </Card>
       </div>
     </div>
-  );
+  )
 }

@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react'
 
 type LogoIconProps = {
-  className: string;
-  width?: number;
-  height?: number;
-};
+  className: string
+  width?: number
+  height?: number
+}
 
 const LogoIcon = (props: LogoIconProps) => {
   return (
@@ -24,7 +24,7 @@ const LogoIcon = (props: LogoIconProps) => {
         <g clipPath="url(#clip1_603_147)">
           <mask
             id="mask0_603_147"
-            style={{ maskType: "luminance" }}
+            style={{ maskType: 'luminance' }}
             maskUnits="userSpaceOnUse"
             x="-44"
             y="0"
@@ -95,7 +95,7 @@ const LogoIcon = (props: LogoIconProps) => {
           </g>
           <mask
             id="mask1_603_147"
-            style={{ maskType: "luminance" }}
+            style={{ maskType: 'luminance' }}
             maskUnits="userSpaceOnUse"
             x="-44"
             y="-41"
@@ -952,7 +952,7 @@ const LogoIcon = (props: LogoIconProps) => {
         </clipPath>
       </defs>
     </svg>
-  );
-};
+  )
+}
 
-export default LogoIcon;
+export default LogoIcon

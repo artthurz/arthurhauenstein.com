@@ -1,16 +1,16 @@
-"use client";
-import { Dialog, Transition } from "@headlessui/react";
-import React, { useState, Fragment } from "react";
+'use client'
+import { Dialog, Transition } from '@headlessui/react'
+import React, { useState, Fragment } from 'react'
 
 export function Menu() {
-  let [isOpen, setIsOpen] = useState(false);
+  let [isOpen, setIsOpen] = useState(false)
 
   function closeModal() {
-    setIsOpen(false);
+    setIsOpen(false)
   }
 
   function openModal() {
-    setIsOpen(true);
+    setIsOpen(true)
   }
 
   return (
@@ -174,7 +174,7 @@ export function Menu() {
         </Dialog>
       </Transition>
     </>
-  );
+  )
 }
 
 const MoreIcon = () => (
@@ -192,7 +192,7 @@ const MoreIcon = () => (
       d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z"
     />
   </svg>
-);
+)
 
 const CloseIcon = () => (
   <svg
@@ -209,4 +209,4 @@ const CloseIcon = () => (
       d="M6 18L18 6M6 6l12 12"
     />
   </svg>
-);
+)

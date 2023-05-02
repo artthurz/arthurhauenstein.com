@@ -1,23 +1,23 @@
-import "./globals.css";
-import { Inter } from "next/font/google";
-import { Header, Footer } from "./_compose";
-import Providers from "./providers";
-import { Metadata } from "next";
-const inter = Inter({ subsets: ["latin"] });
+import './globals.css'
+import { Inter } from 'next/font/google'
+import { Header, Footer } from './_compose'
+import Providers from './providers'
+import { Metadata } from 'next'
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "Arthur Hauenstein",
+  title: 'Arthur Hauenstein',
   description:
-    "This is my personal page, where I will update my portfolio and bring news about myself.",
+    'This is my personal page, where I will update my portfolio and bring news about myself.',
   icons: {
-    icon: { url: "/img/favicon.ico", type: "image/svg" },
-  },
-};
+    icon: { url: '/img/favicon.ico', type: 'image/svg' }
+  }
+}
 
 export default function RootLayout({
-  children,
+  children
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html
@@ -34,5 +34,5 @@ export default function RootLayout({
         </Providers>
       </body>
     </html>
-  );
+  )
 }

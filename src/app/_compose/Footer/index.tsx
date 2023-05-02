@@ -1,7 +1,7 @@
-import LogoIcon from "@/assets/LogoIcon";
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import LogoIcon from '@/assets/LogoIcon'
+import Image from 'next/image'
+import Link from 'next/link'
+import React from 'react'
 
 export const Footer = () => {
   return (
@@ -12,5 +12,5 @@ export const Footer = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}

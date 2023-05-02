@@ -1,6 +1,6 @@
-import Image from "next/image";
-import React from "react";
-import { SkillsCards } from "./_compose";
+import Image from 'next/image'
+import React from 'react'
+import { SkillsCards } from './_compose'
 
 export default function Home() {
   return (
@@ -14,15 +14,15 @@ export default function Home() {
             Bem-vindo ao meu portifólio, acompanhe minha tragetória até aqui.
           </h1>
           <p className="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">
-            Construo aplicações focadas na{" "}
+            Construo aplicações focadas na{' '}
             <span className="text-sky-500 dark:text-sky-400">
               experiência do usuário
-            </span>{" "}
+            </span>{' '}
             e no <span className="text-sky-500 dark:text-sky-400">desgin</span>,
-            proporcionando{" "}
+            proporcionando{' '}
             <span className="text-sky-500 dark:text-sky-400">
               experiências únicas
-            </span>{" "}
+            </span>{' '}
             para as pessoas. Apenas fazer bem feito não é mais o suficiente.
           </p>
 
@@ -138,5 +138,5 @@ export default function Home() {
         </section>
       </div>
     </React.Fragment>
-  );
+  )
 }
