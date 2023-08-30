@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Nav() {
+export function Nav() {
   return (
     <nav>
       <ul className="hidden md:flex items-center gap-x-8">

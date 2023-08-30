@@ -1,4 +1,4 @@
-export { default as ThemeSelector } from './ThemeSelector'
-export { default as Menu } from './Menu'
-export { default as Nav } from './Nav'
-export { default as LocaleSelector } from './LocaleSelector'
+export * from './ThemeSelector'
+export * from './Menu'
+export * from './Nav'
+export * from './LocaleSelector'

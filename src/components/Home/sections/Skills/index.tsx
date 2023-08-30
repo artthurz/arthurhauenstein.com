@@ -1,7 +1,7 @@
 import React from 'react'
 import { SkillsCards } from './_compose'
 
-export default function Skills() {
+export function Skills() {
   return (
     <section id="skills">
       <div className="max-w-7xl mb-10 mx-auto px-4 sm:px-6 md:px-8">

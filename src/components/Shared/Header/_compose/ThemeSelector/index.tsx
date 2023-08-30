@@ -4,7 +4,7 @@ import { useTheme } from 'next-themes'
 import { Fragment, useEffect, useState } from 'react'
 import { DarkIcon, LightIcon, SystemIcon, MenuItem } from './_compose'
 
-export default function ThemeSelector() {
+export function ThemeSelector() {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
 

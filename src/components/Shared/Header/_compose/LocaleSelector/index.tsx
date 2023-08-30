@@ -10,7 +10,7 @@ type LocaleSelctorProps = {
   className?: string
 }
 
-export default function LocaleSelector({ className }: LocaleSelctorProps) {
+export function LocaleSelector({ className }: LocaleSelctorProps) {
   const { pathname, push, locale } = useRouter()
 
   function handleChangeLocale(newLocale: TLocales) {

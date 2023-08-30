@@ -7,7 +7,7 @@ type LocaleSelctorProps = {
   onSelect?: () => void
 }
 
-export default function LocaleSelector({ onSelect }: LocaleSelctorProps) {
+export function LocaleSelector({ onSelect }: LocaleSelctorProps) {
   const { pathname, push, locale } = useRouter()
   const [selectedLanguage, setSelectedLanguage] = useState('')
 

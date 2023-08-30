@@ -1,1 +1,1 @@
-export { default as LocaleSelector } from './LocaleSelector'
+export * from './LocaleSelector'

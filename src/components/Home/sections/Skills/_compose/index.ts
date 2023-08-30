@@ -1,1 +1,1 @@
-export { default as SkillsCards } from './SkillsCards'
+export * from './SkillsCards'

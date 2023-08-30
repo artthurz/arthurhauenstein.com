@@ -3,7 +3,7 @@ import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 import { LocaleSelector } from './_compose'
 
-export default function Menu() {
+export function Menu() {
   let [isOpen, setIsOpen] = useState(false)
 
   function closeModal() {

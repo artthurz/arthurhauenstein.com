@@ -2,7 +2,7 @@ import { useTranslator } from '@src/i18n'
 import Image from 'next/image'
 import React from 'react'
 
-export default function Welcome() {
+export function Welcome() {
   const translate = useTranslator()
   return (
     <section className="relative min-h-[70rem] -mt-[72px]">

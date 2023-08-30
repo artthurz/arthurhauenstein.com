@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Academic() {
+export function Academic() {
   return (
     <section id="academic">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
