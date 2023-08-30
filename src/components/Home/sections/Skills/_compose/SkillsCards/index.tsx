@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card } from '@src/components'
+import { Card } from './_compose'
 import Image from 'next/image'
 import NextLogo from './assets/next'
 

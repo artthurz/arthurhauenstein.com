@@ -1,2 +1,2 @@
-export * from './Shared'
-export * from './Home'
+export * from './shared'
+export * from './home'

@@ -8,7 +8,12 @@ export type CardProps = {
   title: string
 }
 
-export const Card = ({ children, className, title, ...props }: CardProps) => {
+export default function Card({
+  children,
+  className,
+  title,
+  ...props
+}: CardProps) {
   const wrapperRef = useRef<HTMLDivElement>(null)
   const [cardPerspective, setCardPerspective] = useState({})
   const [childrenPerspective, setChildrenPerspective] = useState({})
