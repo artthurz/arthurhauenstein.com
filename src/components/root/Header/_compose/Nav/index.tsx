@@ -7,6 +7,14 @@ export function Nav() {
         <li>
           <a
             className="hover:text-sky-500 dark:hover:text-sky-400"
+            href="#skills"
+          >
+            Competências
+          </a>
+        </li>
+        <li>
+          <a
+            className="hover:text-sky-500 dark:hover:text-sky-400"
             href="#academic"
           >
             Formação
@@ -15,9 +23,17 @@ export function Nav() {
         <li>
           <a
             className="hover:text-sky-500 dark:hover:text-sky-400"
-            href="#skills"
+            href="#courses"
           >
-            Competências
+            Cursos
+          </a>
+        </li>
+        <li>
+          <a
+            className="hover:text-sky-500 dark:hover:text-sky-400"
+            href="#contact"
+          >
+            Contato
           </a>
         </li>
       </ul>

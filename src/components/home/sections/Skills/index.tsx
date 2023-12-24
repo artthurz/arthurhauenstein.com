@@ -1,9 +1,9 @@
 import React from 'react'
-import { SkillsCards } from './_compose'
+import SkillsCards from './SkillsCards'
 
 export function Skills() {
   return (
-    <section id="skills">
+    <section id="skills" className="mt-28">
       <div className="max-w-7xl mb-10 mx-auto px-4 sm:px-6 md:px-8">
         <div className="w-16 h-16 p-[0.1875rem] rounded-full ring-1 ring-slate-900/10 shadow overflow-hidden dark:bg-pink-500 dark:shadow-white/20">
           <div className="aspect-w-1 aspect-h-1 bg-[length:100%] bg-[url('/img/section/skills-light.png')] dark:bg-[url('/img/section/skills-dark.png')]" />
@@ -12,7 +12,7 @@ export function Skills() {
           Competências
         </h2>
         <p className="mt-4 text-3xl sm:text-4xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 ">
-          Tecnologias para construir o que quisermos.
+          Tecnologias para construir o futuro.
         </p>
         <div className="mt-4 max-w-3xl space-y-6 ">
           <p>
@@ -21,8 +21,8 @@ export function Skills() {
             emergentes que podem agregar ao trabalho.
           </p>
           <p>
-            Busco trabalhar com as melhores técnologias para resolver as mais
-            diversas necessidades e problemas.
+            Busco trabalhar orientado a necessidade, escolhendo a melhor
+            técnologia para atender cada projeto em que trabalho.
           </p>
         </div>
       </div>

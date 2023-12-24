@@ -26,7 +26,7 @@ export function Welcome() {
           para as pessoas. Apenas fazer bem feito não é mais o suficiente.
         </p>
 
-        <figure className="bg-opacity-50 dark:bg-opacity-50 md:flex rounded-x p-8 md:p-0 mt-24 md:mt-32 text-center shadow-xl text-slate-900 dark:text-slate-300 bg-white dark:bg-slate-800 ring-1 ring-slate-900/5 dark:shadow-white/5 dark:ring-0">
+        <figure className="bg-opacity-50 md:flex rounded-x p-8 md:p-0 mt-24 md:mt-32 text-center shadow-xl text-slate-900 dark:text-slate-300 bg-white dark:bg-slate-800 ring-1 ring-slate-900/5 dark:shadow-white/5 dark:ring-0">
           <Image
             className="w-36 h-36 md:w-48 md:h-auto object-cover md:object-contain rounded-full md:rounded mx-auto"
             src="/img/me.jpg"

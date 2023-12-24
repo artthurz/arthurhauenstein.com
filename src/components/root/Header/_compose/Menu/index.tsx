@@ -64,6 +64,15 @@ export function Menu() {
               <li>
                 <a
                   className="hover:text-sky-500 dark:hover:text-sky-400"
+                  href="#skills"
+                  onClick={closeModal}
+                >
+                  Competências
+                </a>
+              </li>
+              <li>
+                <a
+                  className="hover:text-sky-500 dark:hover:text-sky-400"
                   href="#academic"
                   onClick={closeModal}
                 >
@@ -73,10 +82,19 @@ export function Menu() {
               <li>
                 <a
                   className="hover:text-sky-500 dark:hover:text-sky-400"
-                  href="#skills"
+                  href="#courses"
                   onClick={closeModal}
                 >
-                  Competências
+                  Cursos
+                </a>
+              </li>
+              <li>
+                <a
+                  className="hover:text-sky-500 dark:hover:text-sky-400"
+                  href="#contact"
+                  onClick={closeModal}
+                >
+                  Contato
                 </a>
               </li>
             </ul>

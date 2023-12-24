@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-export function Content() {
+export default function University() {
   return (
     <div className="rounded mx-auto grid grid-cols-1 lg:gap-x-20 lg:grid-cols-2">
       <div className="lg:mt-16 relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
@@ -97,9 +97,14 @@ export function Content() {
         </a>
       </div>
       <p className="mt-4 text-sm leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 dark:text-slate-400">
-        Fundada em 1969 a Universidade do Vale do Taquari é referência em
-        ensino, seu campus possui todos os recursos e técnologia para comportar
-        mais de 12 mil alunos.
+        Fundada em <b>1969</b> a Universidade do Vale do Taquari é{' '}
+        <b>referência</b> em ensino. Para comportar seus mais de{' '}
+        <b>12 mil alunos</b>, o campus da Univates conta com{' '}
+        <b>moderna estrutura</b> de laboratórios e ambientes especiais equipados
+        com recursos tecnológicos, que permitem aos estudantes inúmeras
+        experiências práticas de aprendizagem. São mais de{' '}
+        <b>200 laboratórios</b>, museus e salas especiais à disposição dos
+        estudantes e professores.
       </p>
     </div>
   )
