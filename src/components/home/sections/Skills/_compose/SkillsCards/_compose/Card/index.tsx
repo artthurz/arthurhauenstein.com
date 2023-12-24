@@ -108,11 +108,11 @@ export function Card({ children, className, title, ...props }: CardProps) {
       }}
       {...props}
       className={twMerge(
-        'relative backdrop-blur dark:backdrop-blur grid pd-2 w-36 h-36 grid-cols-1 lg:p-4 rounded-xl md:w-60 md:h-28 md:grid-cols-2 overflow-hidden justify-center items-center z-10 touch-none hover:cursor-pointer',
+        'relative backdrop-blur dark:backdrop-blur grid pd-2 w-36 h-36 grid-cols-1 lg:p-4 rounded-xl md:w-60 md:h-28 md:grid-cols-2 overflow-hidden justify-center items-center z-10 touch-none',
         className
       )}
     >
-      <div ref={wrapperRef} className="absolute z-10 inset-0 cursor-pointer" />
+      <div ref={wrapperRef} className="absolute z-10 inset-0" />
       <div style={childrenPerspective}>{children}</div>
       <h1 className="lg:ml-4 text-center dark:text-white text-slate-900">
         {title}

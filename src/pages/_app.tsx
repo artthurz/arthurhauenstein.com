@@ -24,7 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <meta
           name="keywords"
-          content="Arthur Hauenstein, Arthur, Hauenstein, Desenvolvedor, Engenheiro de Software, Software Engineer, Developer, Software, React, Node, Native, HTML, CSS, JavaScript, Typescript"
+          content="Arthur Hauenstein, Arthur, Hauenstein, Desenvolvedor, Engenheiro de Software, Software Engineer, Developer, Software, React, .NET, Node, React Native, HTML, CSS, JavaScript, Typescript"
         />
         <link rel="manifest" href="/wmanifest.json" />
         <link

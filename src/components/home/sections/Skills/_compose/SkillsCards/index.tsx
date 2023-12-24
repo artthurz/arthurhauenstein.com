@@ -53,11 +53,22 @@ export function SkillsCards() {
         </Card>
       </div>
       <div className="w-auto flex justify-center items-center">
-        <Card key="tailwindcss" className="[color:#0ea5e9]" title="tailwindcss">
+        <Card key="csharp" className="[color:#561cca]" title="C#">
           <Image
             className="w-20 h-20 object-contain mx-auto"
-            src="/img/skills/tailwindcss.svg"
-            alt="tailwindcss"
+            src="/img/skills/csharp.svg"
+            alt="C#"
+            width={80}
+            height={80}
+          />
+        </Card>
+      </div>
+      <div className="w-auto flex justify-center items-center">
+        <Card key="dotNET" className="[color:#561cca]" title=".NET">
+          <Image
+            className="w-20 h-20 object-contain mx-auto"
+            src="/img/skills/dotNET.svg"
+            alt=".NET"
             width={80}
             height={80}
           />
