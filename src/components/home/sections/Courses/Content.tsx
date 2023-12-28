@@ -1,55 +1,75 @@
-import { useState } from 'react'
 import Timeline from './Timeline'
 
 const courses = [
   {
-    title: 'balta.io',
+    name: 'Carreira .NET Developer',
+    institution: 'Balta',
     //description: 'C# & .NET',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    date: '10/2023'
+      'Desenvolvimento e Arquitetura backend em C# e .NET pelo 11x Microsfot MVP André Baltieri.',
+    date: '10/2023',
+    color: 'blue',
+    background: 'bg-blue-100 dark:bg-blue-900',
+    textColor: 'text-blue-800 dark:text-blue-300'
   },
   {
-    title: 'UX Unicórnio by Leandro Rezende',
+    name: 'UX Unicórnio',
+    institution: 'por Leandro Rezende',
     //description: 'UI/UX Desing',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    date: '04/2023'
+      'Formação em UI/UX Design do zero ao nível profissional de Design de Experiência do Usuário.',
+    date: '04/2023',
+    background: 'bg-pink-100 dark:bg-pink-900',
+    textColor: 'text-pink-800 dark:text-pink-300'
   },
   {
-    title: 'Backend Development by Ariel Weinberger',
+    name: 'Backend Development - NestJS',
+    institution: 'por Ariel Weinberger',
     //description: 'NestJS',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    date: '09/2021'
+    description: 'Desenvolvimento moderno de backend em com foco em NestJS.',
+    date: '09/2021',
+    background: 'bg-red-100 dark:bg-red-900',
+    textColor: 'text-red-800 dark:text-red-300'
   },
   {
-    title: 'Rocketseat - Mobile',
+    name: 'Ignite React Native',
+    institution: 'Rocketseat',
     //description: 'React Native',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    date: '04/2021'
+      'Curso completo de React Native. Utilizado diversas ferramentas importantes como TypeScript, Expo, Styled Components, Async Storage, Autenticação Social, Animações, Context API, Hooks, Jest e diversas outras.',
+    date: '04/2021',
+    background: 'bg-purple-100 dark:bg-purple-900',
+    textColor: 'text-purple-800 dark:text-purple-300'
   },
   {
-    title: 'Rocketseat - Frontend',
+    name: 'Ignite React',
+    institution: 'Rocketseat',
     //description: 'React & NextJS',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    date: '04/2021'
+      'Curso completo de React.JS. Utilizado diversas ferramentas importantes como TypeScript, Next.JS, Styled Components, SASS, Context API, Hooks, Jest e diversas outras.',
+    date: '04/2021',
+    background: 'bg-purple-100 dark:bg-purple-900',
+    textColor: 'text-purple-800 dark:text-purple-300'
   },
   {
-    title: 'Rocketseat - Backend',
+    name: 'Ignite Node',
+    institution: 'Rocketseat',
     //description: 'Node.js',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    date: '04/2021'
+      'Curso completo de Node.JS. Utilizado diversas ferramentas importantes como TypeScript, Rest, SOLID, Docker, TypeORM, JWT, bcrypt, Jest e diversas outras.',
+    date: '04/2021',
+    background: 'bg-purple-100 dark:bg-purple-900',
+    textColor: 'text-purple-800 dark:text-purple-300'
   },
   {
-    title: 'Rocketseat - Fullstack',
+    name: 'Bootcamp GoStack',
+    institution: 'Rocketseat',
     //description: 'React, React Native & Node.js',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    date: '10/2019'
+      'Bootcamp intensivo de 6 meses com foco em React.JS, React Native e Node.JS do zero ao deploy. Incluindo testes automatizados, integração contínua, publicação nas stores, e todas as biliotecas e frameworks importantes.',
+    date: '10/2019',
+    background: 'bg-purple-100 dark:bg-purple-900',
+    textColor: 'text-purple-800 dark:text-purple-300'
   }
 ]
 
