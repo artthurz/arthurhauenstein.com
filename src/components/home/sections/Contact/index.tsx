@@ -91,7 +91,6 @@ export function Contact() {
             >
               <Image
                 className="h-5 w-5"
-                loading="lazy"
                 src="/img/social-media/email-icon.svg"
                 alt="Email"
                 height={80}
@@ -129,7 +128,6 @@ export function Contact() {
             >
               <Image
                 className="h-5 w-5"
-                loading="lazy"
                 src="/img/social-media/instagram.svg"
                 alt="Instagram"
                 height={80}
