@@ -3,7 +3,7 @@ import Content from './Content'
 
 export function Courses() {
   return (
-    <section id="courses" className="mb-36 sm:mb-0">
+    <section id="courses">
       <div className="mb-6 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
         <div className="w-16 h-16 p-[0.1875rem] rounded-full ring-1 ring-slate-900/10 shadow overflow-hidden dark:bg-sky-500 dark:shadow-white/20">
           <div className="aspect-w-1 aspect-h-1 bg-[length:100%] bg-[url('/img/section/courses-light.png')] dark:bg-[url('/img/section/courses-dark.png')]" />
