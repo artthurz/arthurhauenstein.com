@@ -3,7 +3,7 @@ import React from 'react'
 
 export function Contact() {
   return (
-    <section id="contact" className="mb-12 sm:mb-0">
+    <section id="contact">
       <div className="mb-6 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
         <div className="w-16 h-16 p-[0.1875rem] rounded-full ring-1 ring-slate-900/10 shadow overflow-hidden dark:bg-blue-500 dark:shadow-white/20">
           <div className="aspect-w-1 aspect-h-1 bg-[length:100%] bg-[url('/img/section/contact-light.png')] dark:bg-[url('/img/section/contact-dark.png')]" />
