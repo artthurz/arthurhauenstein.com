@@ -14,7 +14,7 @@ interface MarkProps {
 
 export default function Mark(props: MarkProps) {
   return (
-    <li className="mb-10 ms-6">
+    <li className="mb-10 ms-6" data-aos="zoom-in-right">
       <span
         className={twMerge(
           `absolute flex items-center justify-center w-6 h-6  rounded-full -start-3 ring-8 ring-white dark:ring-gray-900`,
@@ -23,7 +23,7 @@ export default function Mark(props: MarkProps) {
       >
         <Calendar {...props} />
       </span>
-      <h3 className="flex justify-between sm:justify-normal items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+      <h3 className="m-6 flex justify-between sm:justify-normal items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
         {props.name}
         <div
           className={twMerge(
