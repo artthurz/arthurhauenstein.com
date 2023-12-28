@@ -31,7 +31,7 @@ const courses = [
     textColor: 'text-red-800 dark:text-red-300'
   },
   {
-    name: 'Ignite React Native',
+    name: 'Formação em React Native',
     institution: 'Rocketseat',
     description:
       'Curso completo de React Native. Utilizado diversas ferramentas importantes como TypeScript, Expo, Styled Components, Async Storage, Autenticação Social, Animações, Context API, Hooks, Jest e diversas outras.',
@@ -41,7 +41,7 @@ const courses = [
     textColor: 'text-purple-800 dark:text-purple-300'
   },
   {
-    name: 'Ignite React',
+    name: 'Formação em React',
     institution: 'Rocketseat',
     description:
       'Curso completo de React.JS. Utilizado diversas ferramentas importantes como TypeScript, Next.JS, Styled Components, SASS, Context API, Hooks, Jest e diversas outras.',
@@ -51,7 +51,7 @@ const courses = [
     textColor: 'text-purple-800 dark:text-purple-300'
   },
   {
-    name: 'Ignite Node',
+    name: 'Formação em Node',
     institution: 'Rocketseat',
     description:
       'Curso completo de Node.JS. Utilizado diversas ferramentas importantes como TypeScript, Rest, SOLID, Docker, TypeORM, JWT, bcrypt, Jest e diversas outras.',
@@ -61,7 +61,7 @@ const courses = [
     textColor: 'text-purple-800 dark:text-purple-300'
   },
   {
-    name: 'Bootcamp GoStack',
+    name: 'Formação Full-Stack',
     institution: 'Rocketseat',
     description:
       'Bootcamp intensivo de 6 meses com foco em React.JS, React Native e Node.JS do zero ao deploy. Incluindo testes automatizados, integração contínua, publicação nas stores, e todas as biliotecas e frameworks importantes.',

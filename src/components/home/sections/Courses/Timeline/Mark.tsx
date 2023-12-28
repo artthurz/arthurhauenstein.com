@@ -35,7 +35,7 @@ export default function Mark(props: MarkProps) {
             {props.institution}
           </span>
           <a href={props.link} target="_blank">
-            <Link />
+            <Link {...props} />
           </a>
         </div>
       </h3>
@@ -63,7 +63,7 @@ function Calendar(props: MarkProps) {
   )
 }
 
-function Link() {
+function Link(props: MarkProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +71,7 @@ function Link() {
       viewBox="0 0 24 24"
       strokeWidth={2}
       stroke="currentColor"
-      className="w-4 h-4 text-slate-700 dark:text-slate-100"
+      className={twMerge('w-4 h-4', props.textColor)}
     >
       <path
         strokeLinecap="round"
