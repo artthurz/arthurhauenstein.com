@@ -24,7 +24,10 @@ export function Contact() {
         <div className="absolute top-0 inset-x-0 bg-top bg-no-repeat bg-[url('/img/beams-background/beams-blue-light.jpg')] dark:bg-[url('/img/beams-background/beams-blue-dark.png')] [background-size:125.5rem] [height:30rem] xl:top-8" />
         <div className="absolute inset-x-0 h-[37.5rem] bg-[url('/img/bg-grid-slate-900.svg')] bg-top [mask-image:linear-gradient(0deg,transparent,black)] dark:bg-[url('/img/bg-grid-slate-400.svg')] dark:bg-[center_top_-1px] dark:border-t dark:border-slate-100/5 top-0 xl:top-8" />
         <div className="flex items-center justify-center relative h-96 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-          <div className="flex flex-wrap justify-center gap-4">
+          <div
+            className="flex flex-wrap justify-center gap-4"
+            data-aos="zoom-in-up"
+          >
             <a
               className="gap-2 bg-green-600 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded"
               href="https://api.whatsapp.com/send/?phone=5551999891443&text=Hello Arthur, i`m reaching you from arthurhauenstein.com."

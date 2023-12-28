@@ -30,7 +30,7 @@ export function Skills() {
         <div className="hidden dark:block absolute inset-x-0 h-[37.5rem] bg-gradient-to-b from-[#0c1120] top-0 xl:top-8" />
         <div className="absolute top-0 inset-x-0 bg-top bg-no-repeat bg-[url('/img/beams-background/beams-pink-light.jpg')] dark:bg-[url('/img/beams-background/beams-pink-dark.png')] [background-size:125.5rem] [height:30rem] xl:top-8" />
         <div className="absolute inset-x-0 h-[37.5rem] bg-[url('/img/bg-grid-slate-900.svg')] bg-top [mask-image:linear-gradient(0deg,transparent,black)] dark:bg-[url('/img/bg-grid-slate-400.svg')] dark:bg-[center_top_-1px] dark:border-t dark:border-slate-100/5 top-0 xl:top-8" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+        <div className="max-w-7xl mt-12 mx-auto px-4 sm:px-6 md:px-8">
           <SkillsCards />
         </div>
       </div>

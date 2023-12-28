@@ -1,13 +1,22 @@
-import '@src/styles/globals.css'
-import type { AppProps } from 'next/app'
-import Providers from './providers'
 import { Footer, Header } from '@src/components'
+import '@src/styles/globals.css'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import type { AppProps } from 'next/app'
 import { Inter } from 'next/font/google'
 import Head from 'next/head'
+import { useEffect } from 'react'
+import Providers from './providers'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function App({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000
+    })
+  }, [])
+
   return (
     <Providers>
       <Head>
