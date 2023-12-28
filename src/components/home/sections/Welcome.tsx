@@ -38,7 +38,7 @@ export function Welcome() {
           className="bg-opacity-50 md:flex rounded-x p-8 md:p-0 mt-24 md:mt-32 text-center shadow-xl text-slate-900 dark:text-slate-300 bg-white dark:bg-slate-800 ring-1 ring-slate-900/5 dark:shadow-white/5 dark:ring-0"
           data-aos="fade-right"
           data-aos-offset="300"
-          data-aos-delay="700"
+          data-aos-delay="400"
           data-aos-easing="ease-in-sine"
         >
           <Image
