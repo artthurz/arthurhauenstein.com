@@ -1,6 +1,7 @@
 import { useTranslator } from '@src/i18n'
 import Image from 'next/image'
 import React from 'react'
+import HighlightBox from './HightlightBox'
 
 export function Welcome() {
   const translate = useTranslator()
@@ -60,6 +61,14 @@ export function Welcome() {
             </figcaption>
           </div>
         </figure>
+
+        <div className="flex justify-center mt-24 md:mt-72">
+          <div className="flex gap-6 flex-col md:flex-row">
+            <HighlightBox amount="+7" type="anos de experiência" />
+            <HighlightBox amount="7" type="cursos concluídos" />
+            <HighlightBox amount="+20" type="projetos desenvolvidos" />
+          </div>
+        </div>
       </div>
     </section>
   )
