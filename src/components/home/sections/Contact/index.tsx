@@ -67,7 +67,7 @@ export function Contact() {
             data-aos="zoom-in-up"
           >
             <Button
-              className="hover:bg-green-400 bg-green-600"
+              className="hover:bg-green-400 dark:hover:bg-green-800 bg-green-600"
               name="WhatsApp"
               link="https://api.whatsapp.com/send/?phone=5551999891443&text=Hello Arthur, i`m reaching you from arthurhauenstein.com."
             >
@@ -105,7 +105,7 @@ export function Contact() {
               </svg>
             </Button>
             <Button
-              className="hover:bg-blue-400 bg-blue-600"
+              className="hover:bg-blue-400 dark:hover:bg-blue-800 bg-blue-600"
               name="LinkedIn"
               link="https://www.linkedin.com/in/arthur-hauenstein-646558131"
             >
@@ -121,7 +121,7 @@ export function Contact() {
               </svg>
             </Button>
             <Button
-              className="hover:bg-blue-300 bg-blue-500"
+              className="hover:bg-blue-300 dark:hover:bg-blue-700 bg-blue-500"
               name="Email"
               link="mailto:hauenstein.contact@gmail.com"
             >
@@ -134,7 +134,7 @@ export function Contact() {
               />
             </Button>
             <Button
-              className="hover:bg-gray-500 bg-gray-700"
+              className="hover:bg-gray-500 dark:hover:bg-gray-800 bg-gray-700"
               name="Github"
               link="mailto:hauenstein.contact@gmail.com"
             >
@@ -156,7 +156,7 @@ export function Contact() {
               </svg>
             </Button>
             <Button
-              className="hover:bg-pink-300 bg-pink-500"
+              className="hover:bg-pink-300 dark:hover:bg-pink-700 bg-pink-500"
               name="Instagram"
               link="https://www.instagram.com/arthur.hauenstein/"
             >
