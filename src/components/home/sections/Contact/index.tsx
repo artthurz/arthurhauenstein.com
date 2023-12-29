@@ -4,7 +4,7 @@ import React from 'react'
 export function Contact() {
   return (
     <section id="contact">
-      <div className="mb-6 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+      <div className="mb-12 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
         <div className="w-16 h-16 p-[0.1875rem] rounded-full ring-1 ring-slate-900/10 shadow overflow-hidden dark:bg-blue-500 dark:shadow-white/20">
           <div className="aspect-w-1 aspect-h-1 bg-[length:100%] bg-[url('/img/section/contact-light.png')] dark:bg-[url('/img/section/contact-dark.png')]" />
         </div>
@@ -20,21 +20,21 @@ export function Contact() {
         </p>
       </div>
       <div className="relative pt-10 xl:pt-0 mt-10 xl:mt-2">
-        <div className="hidden dark:block absolute inset-x-0 h-[37.5rem] bg-gradient-to-b from-[#0c1120] top-0 xl:top-8" />
-        <div className="absolute top-0 inset-x-0 bg-top bg-no-repeat bg-[url('/img/beams-background/beams-blue-light.jpg')] dark:bg-[url('/img/beams-background/beams-blue-dark.png')] [background-size:125.5rem] [height:30rem] xl:top-8" />
-        <div className="absolute inset-x-0 h-[37.5rem] bg-[url('/img/bg-grid-slate-900.svg')] bg-top [mask-image:linear-gradient(0deg,transparent,black)] dark:bg-[url('/img/bg-grid-slate-400.svg')] dark:bg-[center_top_-1px] dark:border-t dark:border-slate-100/5 top-0 xl:top-8" />
-        <div className="flex items-center justify-center relative h-96 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+        <div className="hidden dark:block absolute inset-x-0 h-[8rem] bg-gradient-to-b from-[#0c1120] top-0 xl:top-8" />
+        <div className="absolute top-0 inset-x-0 bg-top bg-no-repeat bg-[url('/img/beams-background/beams-blue-light.jpg')] dark:bg-[url('/img/beams-background/beams-blue-dark.png')] [background-size:62.5rem] [height:8rem] xl:top-8 [mask-image:linear-gradient(0deg,transparent,black)]" />
+        <div className="absolute inset-x-0 h-[8rem] bg-[url('/img/bg-grid-slate-900.svg')] bg-top [mask-image:linear-gradient(0deg,transparent,black)] dark:bg-[url('/img/bg-grid-slate-400.svg')] dark:bg-[center_top_-1px] dark:border-t dark:border-slate-100/5 top-0 xl:top-8" />
+        <div className="relative h-24 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <div
             className="flex flex-wrap justify-center gap-4"
             data-aos="zoom-in-up"
           >
             <a
-              className="gap-2 bg-green-600 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded"
+              className="gap-2 bg-opacity-80 bg-green-600 p-2 font-semibold text-[1.2rem] text-white inline-flex items-center space-x-2 rounded shadow-xl ring-1 ring-slate-900/5 dark:shadow-white/5 dark:ring-0"
               href="https://api.whatsapp.com/send/?phone=5551999891443&text=Hello Arthur, i`m reaching you from arthurhauenstein.com."
               target="_blank"
             >
               <svg
-                className="w-5 h-5"
+                className="w-8 h-8"
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
                 y="0px"
@@ -68,12 +68,12 @@ export function Contact() {
               WhatsApp
             </a>
             <a
-              className="gap-2 bg-blue-600 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded"
+              className="gap-2 bg-opacity-80 bg-blue-600 p-2 font-semibold text-[1.2rem] text-white inline-flex items-center space-x-2 rounded shadow-xl ring-1 ring-slate-900/5 dark:shadow-white/5 dark:ring-0"
               href="https://www.linkedin.com/in/arthur-hauenstein-646558131"
               target="_blank"
             >
               <svg
-                className="w-5 h-5 fill-current"
+                className="w-8 h-8 fill-current"
                 role="img"
                 viewBox="0 0 256 256"
                 xmlns="http://www.w3.org/2000/svg"
@@ -85,12 +85,12 @@ export function Contact() {
               Linkedin
             </a>
             <a
-              className="gap-2 bg-blue-500 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded"
+              className="gap-2 bg-opacity-80 bg-blue-500 p-2 font-semibold text-[1.2rem] text-white inline-flex items-center space-x-2 rounded shadow-xl ring-1 ring-slate-900/5 dark:shadow-white/5 dark:ring-0 "
               href="mailto:hauenstein.contact@gmail.com"
               target="_blank"
             >
               <Image
-                className="h-5 w-5"
+                className="w-8 h-8"
                 src="/img/social-media/email-icon.svg"
                 alt="Email"
                 height={80}
@@ -99,12 +99,12 @@ export function Contact() {
               Email
             </a>
             <a
-              className="gap-2 text-white bg-gray-700 p-2 inline-flex items-center space-x-2 rounded"
+              className="gap-2 bg-opacity-80 font-semibold text-[1.2rem] text-white bg-gray-700 p-2 inline-flex items-center space-x-2 rounded shadow-xl ring-1 ring-slate-900/5 dark:shadow-white/5 dark:ring-0 "
               href="https://github.com/artthurz"
               target="_blank"
             >
               <svg
-                className="w-5 h-5 fill-current"
+                className="w-8 h-8 fill-current"
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true"
                 role="img"
@@ -122,12 +122,12 @@ export function Contact() {
               Github
             </a>
             <a
-              className="gap-2 bg-pink-500 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded"
+              className="gap-2 bg-opacity-80 bg-pink-500 p-2 font-semibold text-[1.2rem] text-white inline-flex items-center space-x-2 rounded shadow-xl ring-1 ring-slate-900/5 dark:shadow-white/5 dark:ring-0 "
               href="https://www.instagram.com/arthur.hauenstein/"
               target="_blank"
             >
               <Image
-                className="h-5 w-5"
+                className="w-8 h-8"
                 src="/img/social-media/instagram.svg"
                 alt="Instagram"
                 height={80}
