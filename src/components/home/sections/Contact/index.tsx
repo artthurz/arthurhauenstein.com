@@ -15,15 +15,15 @@ export function Contact() {
           Precisando de um desenvolvedor? Vamos trabalhar juntos.
         </p>
         <p className="mt-4 max-w-3xl space-y-6">
-          Utilize as redes abaixos para me contatar, será um prazer conversar
-          com você.
+          Utilize as redes abaixos para me contatar, estou a disposição para
+          responder suas dúvidas
         </p>
       </div>
       <div className="relative pt-10 xl:pt-0 mt-10 xl:mt-2">
         <div className="hidden dark:block absolute inset-x-0 h-[8rem] bg-gradient-to-b from-[#0c1120] top-0 xl:top-8" />
         <div className="absolute top-0 inset-x-0 bg-top bg-no-repeat bg-[url('/img/beams-background/beams-blue-light.jpg')] dark:bg-[url('/img/beams-background/beams-blue-dark.png')] [background-size:62.5rem] [height:8rem] xl:top-8 [mask-image:linear-gradient(0deg,transparent,black)]" />
         <div className="absolute inset-x-0 h-[8rem] bg-[url('/img/bg-grid-slate-900.svg')] bg-top [mask-image:linear-gradient(0deg,transparent,black)] dark:bg-[url('/img/bg-grid-slate-400.svg')] dark:bg-[center_top_-1px] dark:border-t dark:border-slate-100/5 top-0 xl:top-8" />
-        <div className="relative h-24 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+        <div className="relative h-44 sm:h-32 lg:h-24 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <div
             className="flex flex-wrap justify-center gap-4"
             data-aos="zoom-in-up"
