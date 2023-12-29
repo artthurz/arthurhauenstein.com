@@ -106,11 +106,25 @@ export default function University() {
       >
         <a
           type="button"
-          className="bg-indigo-600 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg"
+          className="flex gap-2 w-fit duration-200 bg-indigo-600 hover:bg-indigo-500 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg"
           href="https://www.univates.br/"
           target="_blank"
         >
           Acessar univates.br
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+            className="w-3 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="m8.25 4.5 7.5 7.5-7.5 7.5"
+            />
+          </svg>
         </a>
       </div>
       <p
