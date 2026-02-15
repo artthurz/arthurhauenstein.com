@@ -1,19 +1,22 @@
 # CLAUDE.md — Arthur Hauenstein Portfolio
 
 ## Visão Geral
-Site de portfólio pessoal com Next.js 15 (App Router), React 19, TypeScript strict, Tailwind CSS 4 + DaisyUI 5, e internacionalização com next-intl 4 (en/pt/es).
+Site de portfólio pessoal com Next.js 16 (App Router), React 19, TypeScript strict, Tailwind CSS 4 + DaisyUI 5, e internacionalização com next-intl 4 (en/pt/es).
+
+## Gerenciador de Pacotes
+- **Sempre usar `pnpm`** — nunca `npm` ou `yarn`
 
 ## Comandos Essenciais
 
 ```bash
-npm run dev      # Servidor de desenvolvimento
-npm run build    # Build de produção
-npm run start    # Servidor de produção
-npm run lint     # ESLint (next/core-web-vitals)
+pnpm dev      # Servidor de desenvolvimento (Turbopack por padrão)
+pnpm build    # Build de produção
+pnpm start    # Servidor de produção
+pnpm lint     # ESLint
 ```
 
 ## Stack
-- **Framework:** Next.js 15 App Router
+- **Framework:** Next.js 16 App Router
 - **UI:** React 19
 - **Linguagem:** TypeScript 5 (strict mode)
 - **Estilos:** Tailwind CSS 4 + DaisyUI 5
@@ -38,7 +41,7 @@ src/
 ├── i18n/
 │   ├── routing.ts         # Configuração central de locales (next-intl 4)
 │   └── request.ts         # getRequestConfig com messages por locale
-├── middleware.ts / navigation.ts  # Config i18n
+├── proxy.ts / navigation.ts       # Config i18n (proxy = middleware no Next 16)
 messages/                  # Arquivos de tradução JSON por locale
 public/                    # Imagens e assets estáticos
 ```
@@ -97,8 +100,8 @@ public/                    # Imagens e assets estáticos
 
 ## Verificação Após Mudanças
 ```bash
-npm run build   # Sem erros de build
-npm run lint    # Sem warnings
+pnpm build   # Sem erros de build
+pnpm lint    # Sem warnings
 ```
 - Verificar que novas chaves de tradução existem nos 3 arquivos de locale
 - Testar troca de tema (claro/escuro) e de idioma (en/pt/es)
