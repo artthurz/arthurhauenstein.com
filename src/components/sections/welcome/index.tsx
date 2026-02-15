@@ -24,7 +24,7 @@ export function WelcomeSection() {
         />
         <div className="pt-6 md:p-8 text-center md:text-left space-y-4">
           <blockquote>
-            <p className="text-lg font-medium">{t("quote.message")}</p>
+            <p className="text-lg font-medium">{t("quote.message", { years: new Date().getFullYear() - 2016 })}</p>
           </blockquote>
           <figcaption className="font-medium">
             <div className="text-accent">Arthur Hauenstein</div>

@@ -31,7 +31,7 @@
         "evolving": "↗︎ evoluindo todos os dias"
       },
       "quote": {
-        "message": "“Nos últimos 8 anos, como engenheiro de software, trabalhei com grandes empresas para ajudá-las a alcançar todo o seu potencial e atrair novos clientes por meio da tecnologia.”",
+        "message": ""Nos últimos {years} anos, como engenheiro de software, trabalhei com grandes empresas para ajudá-las a alcançar todo o seu potencial e atrair novos clientes por meio da tecnologia."",
         "softwareEngineer": "Engenheiro de Software"
       }
     },
