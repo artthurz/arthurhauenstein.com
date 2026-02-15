@@ -92,8 +92,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
-        <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
-        <meta name="theme-color" content="#0B1120" media="(prefers-color-scheme: dark)" />
+        <meta name="theme-color" content="#f8fafc" />
       </head>
       <body className={cn(poppins.className, "bg-slate-50 dark:bg-[#0B1120]")}>
         <Providers locale={locale}>

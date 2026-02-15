@@ -9,31 +9,19 @@ const COLORS = {
 };
 
 export function ThemeColor() {
-  const { resolvedTheme, theme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   useEffect(() => {
     const color = resolvedTheme === "dark" ? COLORS.dark : COLORS.light;
-    const metas = document.querySelectorAll<HTMLMetaElement>('meta[name="theme-color"]');
+    const meta = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]');
+    if (!meta) return;
 
-    if (theme === "system") {
-      // Restore media queries so iOS picks the right one automatically
-      metas.forEach((meta) => {
-        const isDark = meta.getAttribute("media")?.includes("dark") ??
-          meta.getAttribute("content") === COLORS.dark;
-        meta.setAttribute("media", isDark
-          ? "(prefers-color-scheme: dark)"
-          : "(prefers-color-scheme: light)"
-        );
-        meta.setAttribute("content", isDark ? COLORS.dark : COLORS.light);
-      });
-    } else {
-      // Manual theme: remove media so the single color applies
-      metas.forEach((meta) => {
-        meta.removeAttribute("media");
-        meta.setAttribute("content", color);
-      });
-    }
-  }, [resolvedTheme, theme]);
+    meta.setAttribute("content", color);
+
+    // Force iOS Safari to re-read the meta tag
+    meta.remove();
+    document.head.appendChild(meta);
+  }, [resolvedTheme]);
 
   return null;
 }
