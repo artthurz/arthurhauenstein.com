@@ -26,6 +26,7 @@
    ========================================================= */
 [data-theme="light"] {
   color-scheme: light;
+  background-color: #f8fafc;
   --color-primary: #0f172a;
   --color-primary-content: #ffffff;
   --color-accent: #0ea5e9;
@@ -38,6 +39,7 @@
 
 [data-theme="dark"] {
   color-scheme: dark;
+  background-color: #0B1120;
   --color-primary: #ffffff;
   --color-primary-content: #0f172a;
   --color-accent: #38bdf8;
