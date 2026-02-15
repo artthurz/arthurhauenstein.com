@@ -1,4 +1,9 @@
 {
+  "metadata": {
+    "title": "Arthur Hauenstein | Software Engineer",
+    "description": "Software engineer with 10+ years of experience specializing in website and application development for businesses. Expert in React, Next.js, .NET, and modern web technologies.",
+    "keywords": "software engineer, web developer, website development for businesses, React developer, Next.js developer, .NET developer, custom software, business applications, freelance developer, Arthur Hauenstein"
+  },
   "root": {
     "menu": {
       "skills": "Skills",
@@ -17,7 +22,7 @@
         "1": "I build applications focused on",
         "2": "user experience",
         "3": "and",
-        "4": "desgin",
+        "4": "design",
         "5": ", providing",
         "6": "unique experiences",
         "7": "for people."
@@ -27,7 +32,7 @@
         "since2021": "↗︎ since 2021",
         "graduated": "Graduated",
         "at2021": "at 2021",
-        "experience": "Years of expirience",
+        "experience": "Years of experience",
         "evolving": "↗︎ evolving everyday"
       },
       "quote": {

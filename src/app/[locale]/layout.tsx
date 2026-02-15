@@ -1,7 +1,9 @@
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { JsonLd } from "@/components/json-ld";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import { getMessages } from "next-intl/server";
 import React from "react";
 import "./globals.css";
 import Providers from "./providers";
@@ -16,38 +18,68 @@ const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-export const metadata: Metadata = {
-  title: "Arthur Hauenstein",
-  description:
-    "I`m a Software Enginner and this is my personal page, where I will update my portfolio and bring news about myself.",
-  keywords:
-    "Arthur Hauenstein, Arthur, Hauenstein, Desenvolvedor, Engenheiro de Software, Software Engineer, Developer, Software, React, .NET, Node, React Native, HTML, CSS, JavaScript, Typescript",
-  alternates: {
-    canonical: "https://arthurhauenstein.com",
-    languages: {
-      en: "https://arthurhauenstein.com/en",
-      es: "https://arthurhauenstein.com/es",
-      pt: "https://arthurhauenstein.com/pt",
+const BASE_URL = "https://arthurhauenstein.com";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const messages = (await getMessages({ locale })) as Record<string, Record<string, string>>;
+  const meta = messages.metadata;
+
+  return {
+    title: meta.title,
+    description: meta.description,
+    keywords: meta.keywords,
+    alternates: {
+      canonical: `${BASE_URL}/${locale}`,
+      languages: {
+        en: `${BASE_URL}/en`,
+        pt: `${BASE_URL}/pt`,
+        es: `${BASE_URL}/es`,
+      },
     },
-  },
-  icons: [
-    {
-      rel: "apple-touch-icon",
-      sizes: "180x180",
-      url: "/apple-touch-icon.png",
+    openGraph: {
+      type: "website",
+      locale: locale,
+      url: `${BASE_URL}/${locale}`,
+      title: meta.title,
+      description: meta.description,
+      siteName: "Arthur Hauenstein",
+      images: [
+        {
+          url: `${BASE_URL}/og-image.png`,
+          alt: meta.title,
+        },
+      ],
     },
-    {
-      rel: "icon",
-      sizes: "32x32",
-      url: "/favicon-32x32.png",
+    twitter: {
+      card: "summary_large_image",
+      title: meta.title,
+      description: meta.description,
+      images: [`${BASE_URL}/og-image.png`],
     },
-    {
-      rel: "icon",
-      sizes: "16x16",
-      url: "/favicon-32x32.png",
-    },
-  ],
-};
+    icons: [
+      {
+        rel: "apple-touch-icon",
+        sizes: "180x180",
+        url: "/apple-touch-icon.png",
+      },
+      {
+        rel: "icon",
+        sizes: "32x32",
+        url: "/favicon-32x32.png",
+      },
+      {
+        rel: "icon",
+        sizes: "16x16",
+        url: "/favicon-16x16.png",
+      },
+    ],
+  };
+}
 
 export default async function RootLayout({
   children,
@@ -69,6 +101,7 @@ export default async function RootLayout({
           {children}
           <Footer />
         </Providers>
+        <JsonLd locale={locale} />
       </body>
       <SpeedInsights />
       <Analytics />

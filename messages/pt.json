@@ -1,4 +1,9 @@
 {
+  "metadata": {
+    "title": "Arthur Hauenstein | Engenheiro de Software",
+    "description": "Engenheiro de software com mais de 10 anos de experiência, especializado em criação de sites e aplicações para empresas. Especialista em React, Next.js, .NET e tecnologias web modernas.",
+    "keywords": "engenheiro de software, desenvolvedor web, criação de sites para empresas, desenvolvedor React, desenvolvedor Next.js, desenvolvedor .NET, software sob medida, aplicações empresariais, desenvolvedor freelancer, Arthur Hauenstein"
+  },
   "root": {
     "menu": {
       "skills": "Competências",
@@ -17,7 +22,7 @@
         "1": "Construo aplicações focadas na",
         "2": "experiência do usuário",
         "3": "e no",
-        "4": "desgin",
+        "4": "design",
         "5": ", proporcionando",
         "6": "experiências únicas",
         "7": "para as pessoas."
