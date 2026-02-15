@@ -12,14 +12,15 @@ export function ThemeColor() {
   const { resolvedTheme } = useTheme();
 
   useEffect(() => {
+    if (!resolvedTheme) return;
+
+    const isDark = resolvedTheme === "dark";
     const root = document.documentElement;
-    if (resolvedTheme === "dark") {
-      root.style.colorScheme = "dark";
-      root.style.backgroundColor = COLORS.dark;
-    } else {
-      root.style.colorScheme = "light";
-      root.style.backgroundColor = COLORS.light;
-    }
+    const body = document.body;
+
+    root.style.colorScheme = isDark ? "dark" : "light";
+    body.style.colorScheme = isDark ? "dark" : "light";
+    body.style.backgroundColor = isDark ? COLORS.dark : COLORS.light;
   }, [resolvedTheme]);
 
   return null;
