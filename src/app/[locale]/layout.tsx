@@ -1,7 +1,7 @@
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { JsonLd } from "@/components/json-ld";
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { getMessages } from "next-intl/server";
 import React from "react";
@@ -17,10 +17,6 @@ const poppins = Poppins({
   variable: "--font-poppins",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
-
-export const viewport: Viewport = {
-  themeColor: "#f8fafc",
-};
 
 const BASE_URL = "https://arthurhauenstein.com";
 
