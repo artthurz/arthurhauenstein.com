@@ -19,10 +19,7 @@ const poppins = Poppins({
 });
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f8fafc" },
-    { media: "(prefers-color-scheme: dark)", color: "#0B1120" },
-  ],
+  themeColor: "#f8fafc",
 };
 
 const BASE_URL = "https://arthurhauenstein.com";
