@@ -50,8 +50,8 @@ export function SkillsSection() {
   return (
     <section id="skills" className="mb-12 md:mb-0">
       <div className="max-w-7xl mb-10 mx-auto px-4 sm:px-6 md:px-8">
-        <div className="w-16 h-16 p-[0.1875rem] rounded-full ring-1 ring-slate-900/10 shadow overflow-hidden dark:bg-pink-500 dark:shadow-white/20">
-          <div className="h-full w-full aspect-w-1 aspect-h-1 bg-[length:100%] bg-[url('/images/section/skills-light.png')] dark:bg-[url('/images/section/skills-dark.png')]" />
+        <div className="w-16 h-16 p-0.75 rounded-full ring-1 ring-slate-900/10 shadow overflow-hidden dark:bg-pink-500 dark:shadow-white/20">
+          <div className="h-full w-full aspect-w-1 aspect-h-1 bg-size-[100%] bg-[url('/images/section/skills-light.png')] dark:bg-[url('/images/section/skills-dark.png')]" />
         </div>
         <h2 className="mt-8 font-semibold text-pink-500 dark:text-pink-400">
           {t("section")}
@@ -65,9 +65,9 @@ export function SkillsSection() {
         </div>
       </div>
       <div className="relative pt-10 xl:pt-0 mt-10 xl:mt-2">
-        <div className="hidden dark:block absolute inset-x-0 h-[12rem] bg-gradient-to-b from-[#0c1120] top-0 xl:top-8" />
-        <div className="absolute top-0 inset-x-0 bg-top bg-no-repeat bg-beams-pink-light dark:bg-beams-pink-dark  [background-size:80rem] [height:18rem] xl:top-8" />
-        <div className="absolute inset-x-0 h-[12rem] bg-grid-slate-200 dark:bg-grid-slate-400 dark:opacity-15 bg-top [mask-image:linear-gradient(0deg,transparent,black)] dark:bg-[center_top_-1px] dark:border-t dark:border-slate-100/5 top-0 xl:top-8" />
+        <div className="hidden dark:block absolute inset-x-0 h-48 bg-linear-to-b from-[#0c1120] top-0 xl:top-8" />
+        <div className="absolute top-0 inset-x-0 bg-top bg-no-repeat bg-beams-pink-light dark:bg-beams-pink-dark  bg-size-[80rem] h-72 xl:top-8" />
+        <div className="absolute inset-x-0 h-48 bg-grid-slate-200 dark:bg-grid-slate-400 dark:opacity-15 bg-top mask-[linear-gradient(0deg,transparent,black)] dark:bg-position-[center_top_-1px] dark:border-t dark:border-slate-100/5 top-0 xl:top-8" />
 
         <div className="flexjustify-center overflow-hidden">
           <div className="flex flex-col justify-center items-center relative">

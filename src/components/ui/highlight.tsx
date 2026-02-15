@@ -30,8 +30,8 @@ export const Highlight = ({
         display: "inline",
       }}
       className={cn(
-        `relative -z-10 inline-block pb-1 px-1 rounded-lg bg-gradient-to-r text-black dark:text-white`,
-        className
+        `relative -z-10 inline-block pb-1 px-1 rounded-lg bg-linear-to-r text-black dark:text-white`,
+        className,
       )}
     >
       <span className="relative z-10">{children}</span>

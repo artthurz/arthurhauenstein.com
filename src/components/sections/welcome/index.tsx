@@ -14,7 +14,7 @@ export function WelcomeSection() {
       <Highlights />
       <GlassCard className="animate-slidein [--slidein-delay:900ms] opacity-0 mt-24 md:mt-36 p-6 md:p-0">
         <Image
-          className="w-36 h-36 md:w-48 md:h-[240px] object-cover md:object-contain rounded-full md:rounded-3xl mx-auto"
+          className="w-36 h-36 md:w-48 md:h-60 object-cover md:object-contain rounded-full md:rounded-3xl mx-auto"
           src={ArthurPhoto2}
           alt="Eu"
           width={192}

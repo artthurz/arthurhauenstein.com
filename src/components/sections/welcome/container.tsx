@@ -22,11 +22,11 @@ export function Container({ children }: { children: React.ReactNode }) {
 
   return (
     <section
-      className="group relative min-h-[70rem] -mt-[72px]"
+      className="group relative min-h-280 -mt-18"
       onMouseMove={handleMouseMove}
     >
-      <div className="bg-contain min-h-[70rem] absolute inset-0 bottom-10 bg-bottom bg-no-repeat bg-slate-50 dark:bg-[#0B1120] bg-beams-light dark:bg-beams-dark group border-b border-slate-400/5">
-        <div className="absolute inset-0 bg-dot-thick-slate-300 dark:bg-dot-thick-slate-400 dark:opacity-15 pointer-events-none [mask-image:linear-gradient(transparent,black)] [webkit-mask-image:linear-gradient(transparent,black)]" />
+      <div className="bg-contain min-h-280 absolute inset-0 bottom-10 bg-bottom bg-no-repeat bg-slate-50 dark:bg-[#0B1120] bg-beams-light dark:bg-beams-dark group border-b border-slate-400/5">
+        <div className="absolute inset-0 bg-dot-thick-slate-300 dark:bg-dot-thick-slate-400 dark:opacity-15 pointer-events-none mask-[linear-gradient(transparent,black)] [webkit-mask-image:linear-gradient(transparent,black)]" />
         <motion.div
           className="pointer-events-none bg-dot-thick-sky-500 dark:bg-dot-thick-sky-500 absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100"
           style={{
@@ -46,7 +46,7 @@ export function Container({ children }: { children: React.ReactNode }) {
           `,
           }}
         />
-        <div className="absolute inset-0 h-full w-full pointer-events-none [mask-image:radial-gradient(ellipse_at_center,transparent,white)]" />
+        <div className="absolute inset-0 h-full w-full pointer-events-none mask-[radial-gradient(ellipse_at_center,transparent,white)]" />
       </div>
 
       <div className="relative z-20 max-w-6xl mx-auto pt-32 sm:pt-36 lg:pt-48 px-4 sm:px-6 md:px-8 ">
