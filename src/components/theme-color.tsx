@@ -9,18 +9,31 @@ const COLORS = {
 };
 
 export function ThemeColor() {
-  const { resolvedTheme } = useTheme();
+  const { resolvedTheme, theme } = useTheme();
 
   useEffect(() => {
     const color = resolvedTheme === "dark" ? COLORS.dark : COLORS.light;
-    let meta = document.querySelector('meta[name="theme-color"]');
-    if (!meta) {
-      meta = document.createElement("meta");
-      meta.setAttribute("name", "theme-color");
-      document.head.appendChild(meta);
+    const metas = document.querySelectorAll<HTMLMetaElement>('meta[name="theme-color"]');
+
+    if (theme === "system") {
+      // Restore media queries so iOS picks the right one automatically
+      metas.forEach((meta) => {
+        const isDark = meta.getAttribute("media")?.includes("dark") ??
+          meta.getAttribute("content") === COLORS.dark;
+        meta.setAttribute("media", isDark
+          ? "(prefers-color-scheme: dark)"
+          : "(prefers-color-scheme: light)"
+        );
+        meta.setAttribute("content", isDark ? COLORS.dark : COLORS.light);
+      });
+    } else {
+      // Manual theme: remove media so the single color applies
+      metas.forEach((meta) => {
+        meta.removeAttribute("media");
+        meta.setAttribute("content", color);
+      });
     }
-    meta.setAttribute("content", color);
-  }, [resolvedTheme]);
+  }, [resolvedTheme, theme]);
 
   return null;
 }

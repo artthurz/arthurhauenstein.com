@@ -1,9 +1,7 @@
-
 import ArthurPhoto4 from "../../../../public/images/me4.jpg";
 import BTGLogo from "../../../../public/images/btg.jpg";
 import UnivatesLogo from "../../../../public/images/univates.jpg";
 import Image from "next/image";
-import React from "react";
 import { useTranslations } from "next-intl";
 import GlassCard from "@/components/ui/glass-card";
 
