@@ -1,7 +1,7 @@
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { JsonLd } from "@/components/json-ld";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import { getMessages } from "next-intl/server";
 import React from "react";
@@ -17,6 +17,13 @@ const poppins = Poppins({
   variable: "--font-poppins",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f8fafc" },
+    { media: "(prefers-color-scheme: dark)", color: "#0B1120" },
+  ],
+};
 
 const BASE_URL = "https://arthurhauenstein.com";
 
@@ -91,10 +98,7 @@ export default async function RootLayout({
   const { locale } = await params;
   return (
     <html lang={locale} suppressHydrationWarning>
-      <head>
-        <meta name="theme-color" content="#f8fafc" />
-      </head>
-      <body className={cn(poppins.className, "bg-slate-50 dark:bg-[#0B1120]")}>
+<body className={cn(poppins.className, "bg-slate-50 dark:bg-[#0B1120]")}>
         <Providers locale={locale}>
           <Header />
           {children}
