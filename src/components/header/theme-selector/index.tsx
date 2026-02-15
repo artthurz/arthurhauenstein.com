@@ -38,6 +38,7 @@ export function ThemeSelector() {
           )}
           onClick={() => {
             setTheme("light");
+            (document.activeElement as HTMLElement)?.blur();
           }}
         >
           <a>
@@ -50,7 +51,7 @@ export function ThemeSelector() {
             "gap-2 flex cursor-pointer",
             theme === "dark" ? "text-accent" : ""
           )}
-          onClick={() => setTheme("dark")}
+          onClick={() => { setTheme("dark"); (document.activeElement as HTMLElement)?.blur(); }}
         >
           <a>
             <DarkIcon isActive={theme === "dark"} />
@@ -62,7 +63,7 @@ export function ThemeSelector() {
             "gap-2 flex cursor-pointer",
             theme === "system" ? "text-accent" : ""
           )}
-          onClick={() => setTheme("system")}
+          onClick={() => { setTheme("system"); (document.activeElement as HTMLElement)?.blur(); }}
         >
           <a>
             <SystemIcon isActive={theme === "system"} />
