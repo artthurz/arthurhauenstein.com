@@ -12,7 +12,7 @@ export default function Providers({
 }>) {
   const messages = useMessages();
   return (
-    <ThemeProvider enableSystem defaultTheme="system" disableTransitionOnChange>
+    <ThemeProvider attribute="data-theme" enableSystem defaultTheme="system" disableTransitionOnChange>
       <NextIntlClientProvider locale={locale} messages={messages}>
         {children}
         <Toaster richColors />

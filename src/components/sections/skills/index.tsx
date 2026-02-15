@@ -1,4 +1,3 @@
-"use server";
 
 import { useTranslations } from "next-intl";
 import { InfiniteMovingCards } from "./moving-cards";
@@ -45,7 +44,7 @@ const skills = [
   },
 ];
 
-export async function SkillsSection() {
+export function SkillsSection() {
   const t = useTranslations("root.skills");
 
   return (

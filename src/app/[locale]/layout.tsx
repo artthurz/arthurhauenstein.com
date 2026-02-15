@@ -49,13 +49,14 @@ export const metadata: Metadata = {
   ],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-  params: { locale },
+  params,
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }>) {
+  const { locale } = await params;
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className={cn(poppins.className, "bg-slate-50 dark:bg-[#0B1120]")}>

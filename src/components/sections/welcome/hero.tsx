@@ -1,7 +1,7 @@
 "use client";
 
 import { Highlight } from "@/components/ui/highlight";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 import ArthurPhoto from "../../../../public/images/me.jpeg";
 import Image from "next/image";

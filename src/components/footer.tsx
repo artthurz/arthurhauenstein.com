@@ -1,4 +1,3 @@
-"use server";
 
 import LogoIcon from "@/assets/LogoIcon";
 import { Heart } from "lucide-react";
@@ -6,12 +5,12 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 
-export async function Footer() {
+export function Footer() {
   const t = useTranslations("root.footer");
   return (
     <footer className="bg-base-100 pb-16 text-sm px-4 sm:px-6 md:px-8">
-      <div className="footer max-md:footer-center pt-10 max-w-7xl mx-auto border-t border-t-slate-200 dark:border-t-slate-700">
-        <aside>
+      <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-start sm:justify-between pt-10 max-w-7xl mx-auto border-t border-t-slate-200 dark:border-t-slate-700 text-sm">
+        <aside className="flex flex-col items-center gap-2 sm:items-start">
           <LogoIcon className="w-auto h-5" />
           <p className="font-semibold opacity-60">{t("message")}</p>
           <div className="flex gap-1 opacity-60">
@@ -19,16 +18,16 @@ export async function Footer() {
             <Heart className="size-4 fill-current" />
           </div>
         </aside>
-        <nav>
+        <nav className="flex flex-col items-center gap-2 sm:items-end">
           <h6 className="footer-title">Social</h6>
           <div className="grid grid-flow-col gap-4">
             <Link
-              className="btn btn-ghost btn-circle hover:bg-green-400 dark:hover:bg-green-800 bg-green-600 text-white"
+              className="btn btn-ghost btn-circle hover:bg-green-400 dark:hover:bg-green-800 bg-green-600 text-white !rounded-full overflow-hidden"
               target="_blank"
               href="https://api.whatsapp.com/send/?phone=5551999891443&text=Hello Arthur, i`m reaching you from arthurhauenstein.com."
             >
               <svg
-                className="w-8 h-8"
+                className="w-6 h-6"
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
                 y="0px"
@@ -61,12 +60,12 @@ export async function Footer() {
               </svg>
             </Link>
             <Link
-              className="btn btn-ghost btn-circle hover:bg-blue-400 dark:hover:bg-blue-800 bg-blue-600 text-white"
+              className="btn btn-ghost btn-circle hover:bg-blue-400 dark:hover:bg-blue-800 bg-blue-600 text-white !rounded-full overflow-hidden"
               target="_blank"
               href="https://www.linkedin.com/in/arthur-hauenstein-646558131"
             >
               <svg
-                className="w-8 h-8 fill-current"
+                className="w-6 h-6 fill-current"
                 role="img"
                 viewBox="0 0 256 256"
                 xmlns="http://www.w3.org/2000/svg"
@@ -77,12 +76,12 @@ export async function Footer() {
               </svg>
             </Link>
             <Link
-              className="btn btn-ghost btn-circle hover:bg-blue-300 dark:hover:bg-blue-700 bg-blue-500 text-white"
+              className="btn btn-ghost btn-circle hover:bg-blue-300 dark:hover:bg-blue-700 bg-blue-500 text-white !rounded-full overflow-hidden"
               target="_blank"
               href="mailto:hauenstein.contact@gmail.com"
             >
               <Image
-                className="w-8 h-8"
+                className="w-6 h-6"
                 src="/images/social-media/email-icon.svg"
                 alt="Email"
                 height={80}
@@ -90,12 +89,12 @@ export async function Footer() {
               />
             </Link>
             <Link
-              className="btn btn-ghost btn-circle hover:bg-gray-500 dark:hover:bg-gray-800 bg-gray-700 text-white"
+              className="btn btn-ghost btn-circle hover:bg-gray-500 dark:hover:bg-gray-800 bg-gray-700 text-white !rounded-full overflow-hidden"
               target="_blank"
               href="https://github.com/artthurz"
             >
               <svg
-                className="w-8 h-8 fill-current"
+                className="w-6 h-6 fill-current"
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true"
                 role="img"
@@ -112,12 +111,12 @@ export async function Footer() {
               </svg>
             </Link>
             <Link
-              className="btn btn-ghost btn-circle hover:bg-pink-300 dark:hover:bg-pink-700 bg-pink-500 text-white"
+              className="btn btn-ghost btn-circle hover:bg-pink-300 dark:hover:bg-pink-700 bg-pink-500 text-white !rounded-full overflow-hidden"
               target="_blank"
               href="https://www.instagram.com/arthur.hauenstein/"
             >
               <Image
-                className="w-8 h-8"
+                className="w-6 h-6"
                 src="/images/social-media/instagram.svg"
                 alt="Instagram"
                 height={80}

@@ -1,4 +1,3 @@
-"use server";
 
 import ArthurPhoto4 from "../../../../public/images/me4.jpg";
 import BTGLogo from "../../../../public/images/btg.jpg";
@@ -8,7 +7,7 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import GlassCard from "@/components/ui/glass-card";
 
-export default async function Highlights() {
+export default function Highlights() {
   const t = useTranslations("root.welcome");
 
   return (
@@ -23,18 +22,15 @@ export default async function Highlights() {
             {t("highlights.since2021")}
           </div>
         </div>
-        <div className="avatar">
-          <div className="w-16 rounded-full">
-            <Image
-              alt="me"
-              width={64}
-              height={64}
-              src={BTGLogo}
-              loading="lazy"
-              placeholder="blur"
-            />
-          </div>
-        </div>
+        <Image
+          className="w-16 h-16 rounded-full object-cover shrink-0"
+          alt="BTG Pactual"
+          width={64}
+          height={64}
+          src={BTGLogo}
+          loading="lazy"
+          placeholder="blur"
+        />
       </div>
       <div className="flex justify-between items-center p-6 max-md:border-b-2 md:border-r-2 border-base-300 md:w-1/3">
         <div>
@@ -46,23 +42,20 @@ export default async function Highlights() {
             {t("highlights.at2021")}
           </div>
         </div>
-        <div className="avatar">
-          <div className="w-16 rounded-full">
-            <Image
-              alt="me"
-              width={64}
-              height={64}
-              src={UnivatesLogo}
-              loading="lazy"
-              placeholder="blur"
-            />
-          </div>
-        </div>
+        <Image
+          className="w-16 h-16 rounded-full object-cover shrink-0"
+          alt="Univates"
+          width={64}
+          height={64}
+          src={UnivatesLogo}
+          loading="lazy"
+          placeholder="blur"
+        />
       </div>
       <div className="flex justify-between items-center p-6 md:w-1/3">
         <div>
           <div className="font-bold text-primary text-5xl md:text-4xl xl:text-5xl">
-            +8
+            +{new Date().getFullYear() - 2016}
           </div>
           <div className="text-xl md:text-lg xl:text-xl">
             {t("highlights.experience")}
@@ -71,17 +64,17 @@ export default async function Highlights() {
             {t("highlights.evolving")}
           </div>
         </div>
-        <div className="avatar online">
-          <div className="w-16 rounded-full">
-            <Image
-              alt="me"
-              width={64}
-              height={64}
-              src={ArthurPhoto4}
-              loading="lazy"
-              placeholder="blur"
-            />
-          </div>
+        <div className="relative shrink-0">
+          <Image
+            className="w-16 h-16 rounded-full object-cover"
+            alt="Arthur"
+            width={64}
+            height={64}
+            src={ArthurPhoto4}
+            loading="lazy"
+            placeholder="blur"
+          />
+          <span className="absolute top-[7%] right-[7%] block w-[15%] h-[15%] rounded-full bg-success outline-2 outline-base-100" />
         </div>
       </div>
     </GlassCard>

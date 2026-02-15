@@ -1,9 +1,8 @@
-"use server";
 
 import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
 
-export async function Nav() {
+export function Nav() {
   const t = useTranslations("root.menu");
 
   return (

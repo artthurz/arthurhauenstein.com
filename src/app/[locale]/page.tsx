@@ -1,4 +1,3 @@
-"use server";
 
 import { AcademicSection } from "@/components/sections/academic";
 import { ContactSection } from "@/components/sections/contact";

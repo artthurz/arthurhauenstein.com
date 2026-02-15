@@ -1,7 +1,7 @@
 "use client";
 
 import { Highlight } from "@/components/ui/highlight";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 
 export default function Title() {

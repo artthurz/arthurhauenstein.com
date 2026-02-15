@@ -1,4 +1,3 @@
-"use server";
 
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -7,7 +6,7 @@ import Highlights from "./highlights";
 import ArthurPhoto2 from "../../../../public/images/me2.jpeg";
 import GlassCard from "@/components/ui/glass-card";
 
-export async function WelcomeSection() {
+export function WelcomeSection() {
   const t = useTranslations("root.welcome");
 
   return (

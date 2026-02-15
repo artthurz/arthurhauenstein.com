@@ -27,21 +27,6 @@ export const InfiniteMovingCards = ({
 
   const [start, setStart] = useState(false);
 
-  const getDirection = () => {
-    if (containerRef.current) {
-      if (direction === "left") {
-        containerRef.current.style.setProperty(
-          "--animation-direction",
-          "forwards"
-        );
-      } else {
-        containerRef.current.style.setProperty(
-          "--animation-direction",
-          "reverse"
-        );
-      }
-    }
-  };
   const getSpeed = () => {
     if (containerRef.current) {
       if (speed === "fast") {
@@ -64,7 +49,6 @@ export const InfiniteMovingCards = ({
         }
       });
 
-      getDirection();
       getSpeed();
       setStart(true);
     }
@@ -87,7 +71,7 @@ export const InfiniteMovingCards = ({
         ref={scrollerRef}
         className={cn(
           "flex min-w-full shrink-0 gap-4 w-max flex-nowrap",
-          start && "animate-scroll ",
+          start && (direction === "left" ? "animate-scroll" : "animate-scroll-reverse"),
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >

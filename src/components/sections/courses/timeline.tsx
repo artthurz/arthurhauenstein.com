@@ -1,4 +1,3 @@
-"use server";
 
 import { cn } from "@/lib/utils";
 import { ExternalLink } from "lucide-react";
@@ -11,7 +10,7 @@ interface LineProps {
   children: React.ReactNode;
 }
 
-export async function Line(props: LineProps) {
+export function Line(props: LineProps) {
   return (
     <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
       {props.children}
@@ -25,7 +24,7 @@ interface MarkProps extends CourseProps {
   children?: React.ReactNode;
 }
 
-export async function Mark(props: MarkProps) {
+export function Mark(props: MarkProps) {
   const t = useTranslations("root.courses");
   return (
     <li>
@@ -54,8 +53,10 @@ export async function Mark(props: MarkProps) {
       </div>
       <div
         className={cn(
-          "mb-10 timeline-start",
-          props.index % 2 === 0 ? "md:text-end" : "md:timeline-end"
+          "mb-10",
+          props.index % 2 === 0
+            ? "timeline-start md:text-end"
+            : "timeline-end"
         )}
       >
         <time className="font-mono italic">{t(`list.${props.code}.date`)}</time>

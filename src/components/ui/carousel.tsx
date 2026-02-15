@@ -2,10 +2,10 @@
 
 import * as React from "react";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { wrap } from "popmotion";
 import { cn } from "@/lib/utils";
-import { ChevronLeft, ChevronRight, Dot } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const variants = {
   enter: (direction: number) => {

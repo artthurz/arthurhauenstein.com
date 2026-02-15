@@ -1,10 +1,8 @@
-"use server";
-
 import React from "react";
 import { Content } from "./content";
 import { useTranslations } from "next-intl";
 
-export async function CoursesSection() {
+export function CoursesSection() {
   const t = useTranslations("root.courses");
 
   return (

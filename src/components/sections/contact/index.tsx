@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Form } from "./form";
 import { Highlight } from "@/components/ui/highlight";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Title from "./title";
 
 export function ContactSection() {

@@ -1,4 +1,3 @@
-"use server";
 
 import { Carousel } from "@/components/ui/carousel";
 import GlassCard from "@/components/ui/glass-card";
@@ -7,7 +6,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 
-export async function University() {
+export function University() {
   const t = useTranslations("root.academic.university");
 
   return (

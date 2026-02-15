@@ -20,25 +20,9 @@ import { z } from "zod";
 
 const FormSchema = (t: (arg: string) => string) =>
   z.object({
-    name: z
-      .string({
-        required_error: t("required"),
-      })
-      .min(1, {
-        message: t("required"),
-      }),
-    email: z
-      .string({
-        required_error: t("required"),
-      })
-      .email({ message: "Insira um email válido." }),
-    message: z
-      .string({
-        required_error: t("required"),
-      })
-      .min(1, {
-        message: t("required"),
-      }),
+    name: z.string().min(1, { message: t("required") }),
+    email: z.string().email({ message: "Insira um email válido." }),
+    message: z.string().min(1, { message: t("required") }),
   });
 
 export function Form() {
@@ -50,7 +34,7 @@ export function Form() {
   const [isLoading, setIsLoading] = React.useState(false);
 
   const form = useForm<TFormSchema>({
-    resolver: zodResolver(formSchema, {}),
+    resolver: zodResolver(formSchema),
   });
 
   const sendEmail = React.useCallback(async (data: TFormSchema) => {
