@@ -1,9 +1,10 @@
-
-import { AcademicSection } from "@/components/sections/academic";
-import { ContactSection } from "@/components/sections/contact";
-import { CoursesSection } from "@/components/sections/courses";
-import { SkillsSection } from "@/components/sections/skills";
-import { WelcomeSection } from "@/components/sections/welcome";
+import {
+  AcademicSection,
+  ContactSection,
+  CoursesSection,
+  SkillsSection,
+  WelcomeSection,
+} from "@/components/sections";
 
 export default async function Home() {
   return (
