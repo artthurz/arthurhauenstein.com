@@ -1,6 +1,10 @@
+"use client";
 
-import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
+
+function scrollToSection(id: string) {
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+}
 
 export function Nav() {
   const t = useTranslations("root.menu");
@@ -9,24 +13,24 @@ export function Nav() {
     <nav>
       <ul className="hidden md:flex items-center gap-x-8">
         <li>
-          <Link className="hover:text-accent" href="#skills">
+          <button className="hover:text-accent cursor-pointer" onClick={() => scrollToSection("skills")}>
             {t("skills")}
-          </Link>
+          </button>
         </li>
         <li>
-          <Link className="hover:text-accent" href="#academic">
+          <button className="hover:text-accent cursor-pointer" onClick={() => scrollToSection("academic")}>
             {t("graduation")}
-          </Link>
+          </button>
         </li>
         <li>
-          <Link className="hover:text-accent" href="#courses">
+          <button className="hover:text-accent cursor-pointer" onClick={() => scrollToSection("courses")}>
             {t("courses")}
-          </Link>
+          </button>
         </li>
         <li>
-          <Link className="hover:text-accent" href="#contact">
+          <button className="hover:text-accent cursor-pointer" onClick={() => scrollToSection("contact")}>
             {t("contact")}
-          </Link>
+          </button>
         </li>
       </ul>
     </nav>

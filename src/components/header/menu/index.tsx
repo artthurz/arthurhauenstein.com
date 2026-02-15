@@ -40,44 +40,36 @@ export function Menu() {
             </form>
             <ul className="space-y-6">
               <li>
-                <span>
-                  <a
-                    className="hover:text-accent"
-                    href="#skills"
-                    onClick={() => dialogRef.current?.close()}
-                  >
-                    {t("skills")}
-                  </a>
-                </span>
+                <button
+                  className="hover:text-accent cursor-pointer"
+                  onClick={() => { dialogRef.current?.close(); document.getElementById("skills")?.scrollIntoView({ behavior: "smooth" }); }}
+                >
+                  {t("skills")}
+                </button>
               </li>
               <li>
-                <span>
-                  <a
-                    className="hover:text-accent"
-                    href="#academic"
-                    onClick={() => dialogRef.current?.close()}
-                  >
-                    {t("graduation")}
-                  </a>
-                </span>
+                <button
+                  className="hover:text-accent cursor-pointer"
+                  onClick={() => { dialogRef.current?.close(); document.getElementById("academic")?.scrollIntoView({ behavior: "smooth" }); }}
+                >
+                  {t("graduation")}
+                </button>
               </li>
               <li>
-                <a
-                  className="hover:text-accent"
-                  href="#courses"
-                  onClick={() => dialogRef.current?.close()}
+                <button
+                  className="hover:text-accent cursor-pointer"
+                  onClick={() => { dialogRef.current?.close(); document.getElementById("courses")?.scrollIntoView({ behavior: "smooth" }); }}
                 >
                   {t("courses")}
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  className="hover:text-accent"
-                  href="#contact"
-                  onClick={() => dialogRef.current?.close()}
+                <button
+                  className="hover:text-accent cursor-pointer"
+                  onClick={() => { dialogRef.current?.close(); document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" }); }}
                 >
                   {t("contact")}
-                </a>
+                </button>
               </li>
             </ul>
             <LocaleSelector onSelect={() => dialogRef.current?.close()} />
