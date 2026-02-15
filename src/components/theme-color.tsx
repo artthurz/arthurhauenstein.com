@@ -18,11 +18,15 @@ export function ThemeColor() {
     const existing = document.querySelector('meta[name="theme-color"]');
     if (existing) existing.remove();
 
-    // Create a brand new element — iOS Safari won't re-read a mutated one
-    const meta = document.createElement("meta");
-    meta.name = "theme-color";
-    meta.content = color;
-    document.head.appendChild(meta);
+    // Wait for next frame so iOS Safari processes the removal before seeing the new tag
+    const frame = requestAnimationFrame(() => {
+      const meta = document.createElement("meta");
+      meta.name = "theme-color";
+      meta.content = color;
+      document.head.appendChild(meta);
+    });
+
+    return () => cancelAnimationFrame(frame);
   }, [resolvedTheme]);
 
   return null;
