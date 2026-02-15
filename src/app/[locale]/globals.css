@@ -25,6 +25,7 @@
    DaisyUI custom themes — light & dark
    ========================================================= */
 [data-theme="light"] {
+  color-scheme: light;
   --color-primary: #0f172a;
   --color-primary-content: #ffffff;
   --color-accent: #0ea5e9;
@@ -36,6 +37,7 @@
 }
 
 [data-theme="dark"] {
+  color-scheme: dark;
   --color-primary: #ffffff;
   --color-primary-content: #0f172a;
   --color-accent: #38bdf8;
@@ -44,6 +46,18 @@
   --color-base-200: #1e293b;
   --color-base-300: #334155;
   --color-base-content: #ffffff;
+}
+
+/* =========================================================
+   Pre-hydration fallback — before JS sets data-theme,
+   match system preference so Safari 26+ infers correct
+   status bar color from the first paint.
+   ========================================================= */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    background-color: #0B1120;
+  }
 }
 
 /* =========================================================
