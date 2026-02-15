@@ -1,3 +1,4 @@
+import { ThemeColor } from "@/components/theme-color";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "sonner";
 import React from "react";
@@ -13,6 +14,7 @@ export default function Providers({
   const messages = useMessages();
   return (
     <ThemeProvider attribute="data-theme" enableSystem defaultTheme="system" disableTransitionOnChange>
+      <ThemeColor />
       <NextIntlClientProvider locale={locale} messages={messages}>
         {children}
         <Toaster richColors />
