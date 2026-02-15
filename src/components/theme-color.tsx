@@ -13,13 +13,15 @@ export function ThemeColor() {
 
   useEffect(() => {
     const color = resolvedTheme === "dark" ? COLORS.dark : COLORS.light;
-    const meta = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]');
-    if (!meta) return;
 
-    meta.setAttribute("content", color);
+    // Remove existing theme-color meta tag
+    const existing = document.querySelector('meta[name="theme-color"]');
+    if (existing) existing.remove();
 
-    // Force iOS Safari to re-read the meta tag
-    meta.remove();
+    // Create a brand new element — iOS Safari won't re-read a mutated one
+    const meta = document.createElement("meta");
+    meta.name = "theme-color";
+    meta.content = color;
     document.head.appendChild(meta);
   }, [resolvedTheme]);
 
