@@ -18,6 +18,11 @@ export function Nav() {
           </button>
         </li>
         <li>
+          <button className="hover:text-accent cursor-pointer" onClick={() => scrollToSection("projects")}>
+            {t("projects")}
+          </button>
+        </li>
+        <li>
           <button className="hover:text-accent cursor-pointer" onClick={() => scrollToSection("academic")}>
             {t("graduation")}
           </button>

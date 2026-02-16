@@ -9,6 +9,7 @@
       "skills": "Skills",
       "graduation": "Graduation",
       "courses": "Courses",
+      "projects": "Projects",
       "contact": "Contact",
       "changeLanguage": "Change language"
     },
@@ -112,6 +113,25 @@
         }
       },
       "tooltip": "Go to website"
+    },
+    "projects": {
+      "section": "Projects",
+      "title": "What I've built.",
+      "subtitle": "A selection of projects I've worked on, from personal websites to business solutions.",
+      "list": {
+        "arthurhauenstein": {
+          "name": "arthurhauenstein.com",
+          "description": "Personal portfolio built with Next.js 16, React 19, Tailwind CSS 4 and DaisyUI 5. Featuring i18n, dark mode, and modern animations.",
+          "year": "2024",
+          "stack": "Next.js, React, TypeScript, Tailwind CSS, DaisyUI"
+        },
+        "carraroplastica": {
+          "name": "carraroplastica.com",
+          "description": "Professional website for a plastic surgery clinic, focused on user experience, performance and SEO.",
+          "year": "2024",
+          "stack": "Next.js, React, TypeScript, Tailwind CSS"
+        }
+      }
     },
     "contact": {
       "section": "Get in touch",

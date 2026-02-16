@@ -50,6 +50,14 @@ export function Menu() {
               <li>
                 <button
                   className="hover:text-accent cursor-pointer"
+                  onClick={() => { dialogRef.current?.close(); document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" }); }}
+                >
+                  {t("projects")}
+                </button>
+              </li>
+              <li>
+                <button
+                  className="hover:text-accent cursor-pointer"
                   onClick={() => { dialogRef.current?.close(); document.getElementById("academic")?.scrollIntoView({ behavior: "smooth" }); }}
                 >
                   {t("graduation")}
