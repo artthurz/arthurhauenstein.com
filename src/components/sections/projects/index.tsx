@@ -5,7 +5,7 @@ export function ProjectsSection() {
   const t = useTranslations("root.projects");
 
   return (
-    <section id="projects">
+    <section id="projects" className="pt-10 sm:pt-16">
       <div className="mb-6 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
         <div className="w-16 h-16 p-0.75 rounded-full ring-1 ring-slate-900/10 shadow overflow-hidden dark:bg-violet-500 dark:shadow-white/20">
           <div className="w-full h-full aspect-w-1 aspect-h-1 bg-size-[100%] bg-[url('/images/section/projects-light.png')] dark:bg-[url('/images/section/projects-dark.png')]" />
