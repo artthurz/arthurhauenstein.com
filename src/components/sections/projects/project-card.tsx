@@ -61,7 +61,6 @@ export function ProjectCard({ code, image, link, index }: ProjectCardProps) {
             </span>
           ))}
         </div>
-        <p className="text-xs opacity-60">{t("year")}</p>
       </div>
     </motion.a>
   );

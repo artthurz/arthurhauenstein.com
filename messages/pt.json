@@ -122,13 +122,11 @@
         "arthurhauenstein": {
           "name": "arthurhauenstein.com",
           "description": "Portfólio pessoal construído com Next.js 16, React 19, Tailwind CSS 4 e DaisyUI 5. Com i18n, modo escuro e animações modernas.",
-          "year": "2024",
           "stack": "Next.js, React, TypeScript, Tailwind CSS, DaisyUI"
         },
         "carraroplastica": {
           "name": "carraroplastica.com",
           "description": "Site profissional para uma clínica de cirurgia plástica, focado na experiência do usuário, performance e SEO.",
-          "year": "2024",
           "stack": "Next.js, React, TypeScript, Tailwind CSS"
         }
       }
