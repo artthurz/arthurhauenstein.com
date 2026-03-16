@@ -19,6 +19,11 @@ const projects: ProjectDef[] = [
     image: "/images/projects/carraroplastica.png",
     link: "https://carraroplastica.com",
   },
+  {
+    code: "spironello",
+    image: "/images/projects/spironello.png",
+    link: "https://spironello.com",
+  },
 ];
 
 export function Content() {

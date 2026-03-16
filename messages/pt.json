@@ -128,6 +128,11 @@
           "name": "carraroplastica.com",
           "description": "Site profissional para uma clínica de cirurgia plástica, focado na experiência do usuário, performance e SEO.",
           "stack": "Next.js, React, TypeScript, Tailwind CSS"
+        },
+        "spironello": {
+          "name": "spironello.com",
+          "description": "Site profissional para uma clínica de medicina estética, focado na experiência do usuário, performance e SEO.",
+          "stack": "Next.js, React, TypeScript, Tailwind CSS"
         }
       }
     },
